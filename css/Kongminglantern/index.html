@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>夜晚空中孔明灯</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            /* 达到页面居中效果 */
+            display: flex;
+            justify-content: center; /*元素在主轴（页面）上居中排列*/
+            align-items: center; /*元素所在位置垂直居中对齐*/
+
+            background: #ece8fc;
+            min-height: 100vh; /*设置元素的最低高度*/
+        }
+        .pill{
+            background: linear-gradient(to bottom,#312952 0%, #5A4A94 35%, #7B6BC6 100%);
+            width: 160px;
+            height: 335px;
+            position: relative;
+            border-radius: 100px;
+            overflow: hidden; /*将元素的立体空间隐藏的作用，就起到了清除浮动的作用*/
+        }
+        .lanternHills{
+            position: absolute;
+            width: 225px;
+            left: -25px;
+            bottom: -0.5px;
+        }
+        .star {
+            background-color: white;
+            position: absolute;
+            border-radius: 50%;
+        }
+        .star1 {
+            width: 3px;
+            height: 3px;
+            transform: scale(1.1);/*对元素进行缩放*/
+            left: 15px;
+            top: 204px;
+        }
+        .star2 {
+            width: 2px;
+            height: 2px;
+            transform: scale(1.1);
+            left: 19px;
+            top: 226px;
+        }
+        .star3 {
+            width: 3px;
+            height: 3px;
+            transform: scale(1.1);
+            left: 68px;
+            top: 75px;
+        }
+        .star4 {
+            width: 3px;
+            height: 3px;
+            transform: scale(1.1);
+            left: 67px;
+            top: 26px;
+        }
+        .star5 {
+            width: 2px;
+            height: 2px;
+            transform: scale(1.1);
+            left: 19px;
+            top: 16px;
+        }
+        .star6 {
+            width: 3px;
+            height: 3px;
+            transform: scale(1.1);
+            left: 103px;
+            top: 147px;
+        }
+        .star7 {
+            width: 2px;
+            height: 2px;
+            transform: scale(1.1);
+            left: 115px;
+            top: 65px;
+        }
+        .star8 {
+            width: 2px;
+            height: 2px;
+            transform: scale(1.1);
+            left: 73px;
+            top: 21px;
+        }
+        .star9 {
+            width: 2px;
+            height: 2px;
+            transform: scale(1.1);
+            left: 107px;
+            top: 227px;
+        }
+        .star10 {
+            width: 1px;
+            height: 1px;
+            transform: scale(1.1);
+            left: 158px;
+            top: 64px;
+        }
+        .star11 {
+            width: 1px;
+            height: 1px;
+            transform: scale(1.1);
+            left: 29px;
+            top: 50px;
+        }
+        .star12 {
+            width: 3px;
+            height: 3px;
+            transform: scale(1.1);
+            left: 29px;
+            top: 58px;
+        }
+        .star13 {
+            width: 3px;
+            height: 3px;
+            transform: scale(1.1);
+            left: 92px;
+            top: 214px;
+        }
+        .star14 {
+            width: 3px;
+            height: 3px;
+            transform: scale(1.1);
+            left: 149px;
+            top: 114px;
+        }
+        .star15 {
+            width: 3px;
+            height: 3px;
+            transform: scale(1.1);
+            left: 39px;
+            top: 86px;
+        }
+        .star16 {
+            width: 1px;
+            height: 1px;
+            transform: scale(1.1);
+            left: 58px;
+            top: 69px;
+        }
+        .star17 {
+            width: 3px;
+            height: 3px;
+            transform: scale(1.1);
+            left: 158px;
+            top: 2px;
+        }
+        .star18 {
+            width: 3px;
+            height: 3px;
+            transform: scale(1.1);
+            left: 172px;
+            top: 13px;
+        }
+        .star19 {
+            width: 2px;
+            height: 2px;
+            transform: scale(1.1);
+            left: 99px;
+            top: 150px;
+        }
+        .star20 {
+            width: 2px;
+            height: 2px;
+            transform: scale(1.1);
+            left: 175px;
+            top: 165px;
+        }
+        .star21 {
+            width: 1px;
+            height: 1px;
+            transform: scale(1.1);
+            left: 145px;
+            top: 50px;
+        }
+        .star22 {
+            width: 2px;
+            height: 2px;
+            transform: scale(1.1);
+            left: 46px;
+            top: 123px;
+        }
+        .star23 {
+            width: 3px;
+            height: 3px;
+            transform: scale(1.1);
+            left: 77px;
+            top: 2px;
+        }
+        .star24 {
+            width: 2px;
+            height: 2px;
+            transform: scale(1.1);
+            left: 41px;
+            top: 177px;
+        }
+        .star25 {
+            width: 3px;
+            height: 3px;
+            transform: scale(1.1);
+            left: 42px;
+            top: 19px;
+        }
+        .star26 {
+            width: 1px;
+            height: 1px;
+            transform: scale(1.1);
+            left: 71px;
+            top: 59px;
+        }
+        .star27 {
+            width: 3px;
+            height: 3px;
+            transform: scale(1.1);
+            left: 24px;
+            top: 98px;
+        }
+        .lantern1{
+            position: absolute;
+            bottom: -80px;
+            left: 97px;
+            transform: translateX(0);
+            animation-name: lantern1;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+        }
+        .lanterns1 {
+            width: 42px;
+            display: inline-block;
+            z-index: 42000;
+            animation-name: lanterns;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            transform: translateY(0);
+            animation-delay: 3s;
+        }
+        @keyframes lantern1 {
+            50%{
+                transform: translateX(49px);
+            }   
+        }
+        @keyframes lanterns {
+            0%{
+                transform: translateY(0);
+            }
+            50%{
+                transform: translateY(-200px);
+            }
+            100%{
+                transform: translateY(-400px);
+            }
+        }
+        .lantern2 {
+            position: absolute;
+            bottom: -80px;
+            left: 78px;
+            transform: translateX(0);
+            animation-name: lantern2;
+            animation-duration: 12s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+        }
+        .lanterns2 {
+            display: inline-block;
+            width: 44px;
+            z-index: 44000;
+            animation-name: lanterns;
+            animation-duration: 7s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            transform: translateY(0);
+            animation-delay: 4s;
+        }
+        @keyframes lantern2 {
+            50% {
+                transform: translateX(67px);
+            }
+        }
+        .lantern3 {
+            position: absolute;
+            bottom: -80px;
+            left: 9px;
+            transform: translateX(0);
+            animation-name: lantern3;
+            animation-duration: 9s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+        }
+        .lanterns3 {
+            display: inline-block;
+            width: 49px;
+            z-index: 49000;
+            animation-name: lanterns;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            transform: translateY(0);
+            animation-delay: 2s;
+        }
+        @keyframes lantern3 {
+            50% {
+                transform: translateX(32px);
+            }
+        }
+        .lantern4 {
+            position: absolute;
+            bottom: -80px;
+            left: 40px;
+            transform: translateX(0);
+            animation-name: lantern4;
+            animation-duration: 12s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+        }
+        .lanterns4 {
+            display: inline-block;
+            width: 78px;
+            z-index: 78000;
+            animation-name: lanterns;
+            animation-duration: 7s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            transform: translateY(0);
+            animation-delay: 3s;
+        }
+        @keyframes lantern4 {
+            50% {
+                transform: translateX(39px);
+            }
+        }
+        .lantern5 {
+            position: absolute;
+            bottom: -80px;
+            left: 27px;
+            transform: translateX(0);
+            animation-name: lantern6;
+            animation-duration: 9s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+        }
+        .lanterns5 {
+            display: inline-block;
+            width: 49px;
+            z-index: 49000;
+            animation-name: lanterns;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            transform: translateY(0);
+            animation-delay: 2s;
+        }
+        @keyframes lantern5 {
+            50% {
+                transform: translateX(3px);
+            }
+        }
+        .lantern6 {
+            position: absolute;
+            bottom: -80px;
+            left: 54px;
+            transform: translateX(0);
+            animation-name: lanternX4;
+            animation-duration: 13s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+        }
+        .lanterns6 {
+        display: inline-block;
+        width: 52px;
+        z-index: 52000;
+        animation-name: lanterns;
+        animation-duration: 8s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        transform: translateY(0);
+        animation-delay: 1s;
+        }
+        @keyframes lantern6 {
+            50% {
+                transform: translateX(31px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="container_elements">
+            <div class="pill">
+                <span class="star star1"></span>
+                <span class="star star2"></span>
+                <span class="star star3"></span>
+                <span class="star star4"></span>
+                <span class="star star5"></span>
+                <span class="star star6"></span>
+                <span class="star star7"></span>
+                <span class="star star8"></span>
+                <span class="star star9"></span>
+                <span class="star star10"></span>
+                <span class="star star11"></span>
+                <span class="star star12"></span>
+                <span class="star star13"></span>
+                <span class="star star14"></span>
+                <span class="star star15"></span>
+                <span class="star star16"></span>
+                <span class="star star17"></span>
+                <span class="star star18"></span>
+                <span class="star star19"></span>
+                <span class="star star20"></span>
+                <span class="star star21"></span>
+                <span class="star star22"></span>
+                <span class="star star23"></span>
+                <span class="star star24"></span>
+                <span class="star star25"></span>
+                <span class="star star26"></span>
+                <span class="star star27"></span>
+                <img src="./img/lanternHills.png" alt="" class="lanternHills">
+                <div class="lanterncontainer">
+                    <div class="lantern1"><img src="./img/LanternsLarge.png" alt="" class="lanterns1"></div>
+                    <div class="lantern2"><img src="./img/LanternsLarge.png" alt="" class="lanterns2"></div>
+                    <div class="lantern3"><img src="./img/LanternsLarge.png" alt="" class="lanterns3"></div>
+                    <div class="lantern4"><img src="./img/LanternsLarge.png" alt="" class="lanterns4"></div>
+                    <div class="lantern5"><img src="./img/LanternsLarge.png" alt="" class="lanterns5"></div>
+                    <div class="lantern6"><img src="./img/LanternsLarge.png" alt="" class="lanterns6"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
