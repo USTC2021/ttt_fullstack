@@ -16,9 +16,37 @@
             /* 手机上特有的特性 webkit google内核 实验阶段 */
             -webkit-tap-highlight-color: rgba(0, 0, 0, 0.5);
         }
-        /* .weui-btn{
+        /* 基类 */
+        .weui-btn{
+            position: relative;
+            /* 接受我，块级元素 切换 */
+            display: block;
+            /* UI 的锅 */
+            width: 184px;
+            /* 左右居中 */
+            margin-left: auto;
+            margin-right: auto;
+            padding: 8px 24px;
+            box-sizing: border-box;
+            font-weight: 700;
+            text-align: center;
+            font-size: 17px;
+            text-decoration: none;
+            color: #fff;
+            line-height: 1.41176471;
+            border-radius: 4px;
+        }
+        .weui-btn_primary {
+            background-color: #07c160;
+        }
+        .weui-btn_loading.weui-btn_primary {
+            background-color: #06ae56;
+            color: #fff;
+        }
+        /* modifier */
+        .weui-btn_large {
 
-        } */
+        }
     </style>
 </head>
 <body>
@@ -32,6 +60,19 @@
     Block
     Modifier  _
     -->
-    <a href="javascript:;" class="weui-btn weui-btn_primary">页面主操作</a>  <!-- href点击效果，不跳转到指点页面 -->
+    <a href="javascript:;" class="weui-btn weui-btn_primary">页面主操作</a>  <!-- href写法原由：点击效果，不跳转到指点页面 -->
+    <a href="javascript:;" class="weui-btn weui-btn_primary weui-btn_loading">
+        <i class="weui-loading"></i>页面主操作
+    </a>
+    <div class="weui-cells_group weui-cells_group_form">
+        <!-- 两个下划线表示element BEM 
+            .vs-icon.vs-icon_avatar
+        -->
+        <div class="weui-cells_title"></div>
+        <div class="weui-cell">
+            <div class="weui-cell_hd"></div>
+            <weui-cell_bd></weui-cell_bd>
+        </div>
+    </div>
 </body>
 </html>
