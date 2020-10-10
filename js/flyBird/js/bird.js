@@ -22,6 +22,12 @@ var bird = {
             if (bird.div.offsetTop >= 395) { // 掉到地面，清楚定时器
                 bird.fallSpeed = 0
                 clearInterval(bird.flyTime)
+                clearInterval(bird.wingTimer)
+            }
+            // 不让小鸟飞出界
+            if (bird.div.offsetTop < 0) {
+                bird.div.style.top = '0px'
+                bird.fallSpeed = 2
             }
             if (bird.fallSpeed > 12){
                 bird.fallSpeed = 12
