@@ -19,6 +19,7 @@
         <div id="grassLand2"></div>
     </div>
 
+    <script src="./js/bird.js"></script>
     <script>
         // 拿到这个标题的dom结构
         var jsWrapBg = document.getElementById('wrapBg')
@@ -62,6 +63,10 @@
             jsHeadTitle.style.display = 'none'
             jsStartBtn.style.display = 'none'
             clearInterval(headWaveTimer) // 不影响效果，影响浏览器性能
+            // 插入小鸟到页面中
+            bird.showBird(jsWrapBg)
+            bird.flyBird()
+            bird.wingWave()
         }
     </script>
 </body>
