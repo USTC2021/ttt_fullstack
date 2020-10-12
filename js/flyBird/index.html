@@ -65,24 +65,20 @@
 			if (blocksArr.length) {
 				for (var i = 0; i < blocksArr.length; i++) {
 					blocksArr[i].moveBlock();
-					// var x =baseObj.rectangleCrashExamine(blocksArr[i].downDivWrap, bird.div);
-					// var y = baseObj.rectangleCrashExamine(blocksArr[i].upDivWrap, bird.div);
-					// var z = bird.div.offsetTop >= 390;
-					// if (x || y || z) {
-					// 	window.clearInterval(landTimer);//清除landTimer定时器
-					// 	bird.fallSpeed = 0; //小鸟下落
-					// 	jsWrapBg.onclick = null; //消除点击事件
-					// 	jsScore.style.display = "none"; //隐藏计分器
-					// 	jsGameOver.style.display = "block"; // 显示gameover面板
-					// }
+					var x =baseObj.rectangleCrashExamine(blocksArr[i].downDivWrap, bird.div);
+					var y = baseObj.rectangleCrashExamine(blocksArr[i].upDivWrap, bird.div);
+					var z = bird.div.offsetTop >= 390;
+					if (x || y || z) {
+						clearInterval(landTimer);//清除landTimer定时器
+						bird.fallSpeed = 0; //小鸟下落
+						jsWrapBg.onclick = null; //消除点击事件
+					}
 				}
 				if (blocksArr[blocksArr.length - 1].downDivWrap.offsetLeft < (450 - blockDistance)) {
-						// blockDistance = baseObj.randomNum(130,250);
 						var newBlock = new Block();
 						newBlock.createBlock();
 						blocksArr.push(newBlock);
 				}
-				
 				// if (blocksArr[0].downDivWrap.offsetLeft < -50) {
 				// 		jsWrapBg.removeChild(blocksArr[0].downDivWrap);
 				// 		jsWrapBg.removeChild(blocksArr[0].upDivWrap);
