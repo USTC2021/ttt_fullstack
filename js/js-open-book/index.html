@@ -74,7 +74,7 @@
         .flip{
             transform: rotateY(180deg);
         }
-        .shadom, .dino{
+        .shadow, .dino{
             width: 196px;
             height: 132px;
             position: absolute;
@@ -86,7 +86,7 @@
             background: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1602589786919&di=e09bc80b8d748fd873fa741b6a77bbc8&imgtype=0&src=http%3A%2F%2Fpics2.baidu.com%2Ffeed%2Fbd315c6034a85edf81702f204ba7a225dc54752a.jpeg%3Ftoken%3D40ea367f6b2ef995eaa6f5faf705a7d4);
             background-size: cover;
         }
-        .shadom{
+        .shadow{
             background-color: rgba(0, 0, 0, 0.5);
         }
     </style>
@@ -107,5 +107,56 @@
             <div class="page back"></div>
         </div>
     </div>
+
+    <script>
+        (function(window, document) {
+            var prefiex = ['webkit', 'Moz', 'ms', 'o'],
+                book = document.querySelectorAll('.book')[0],
+                page = document.querySelectorAll('.front-cover')[0],
+                dino = document.querySelectorAll('.dino')[0],
+                shadow = document.querySelectorAll('.shadow')[0],
+                centerPoint = window.innerWidth / 2,
+                hold = false,
+                clamp = function(val, min, max){
+                    return Math.max(min, Math.min(val, max))
+                },
+                pageSize = 300;
+            
+            // 鼠标按下的事件
+            page.onmousedown = function() {
+                // console.log('onmousedown')
+                hold = true
+            }
+
+            // 鼠标放开事件
+            window.onmouseup = function() {
+                if (hold) {
+                    hold = false
+                }
+            }
+
+            // 在窗口调整大小的时候执行的事件
+            window.onresize = function() {
+                // console.log(window.innerWidth);
+                centerPoint = window.innerWidth / 2
+            }
+
+            // 鼠标移动时候执行的事件
+            window.onmousemove = function(event) {
+                if(!hold) {
+                    return;
+                }
+                var angle = clamp((centerPoint - event.pageX + pageSize) / pageSize * -90, -180, 0),
+                    i, j;
+                for (i = 0, j = prefiex.length; i < j; i++) {
+                    page.style[prefiex[i] + 'Transform'] = 'rotateY(' + angle + 'deg)'
+                    // page.style[prefiex[i] + 'Transform'] = `rotateY(${angle}deg)`
+                    dino.style[prefiex[i] + 'Transform'] = `rotateX(${angle / 2 + 40}deg)`
+                    book.style[prefiex[i] + 'Transform'] = `rotateX(${60 + angle / 8}deg)`
+                    shadow.style[prefiex[i] + 'Transform'] = `translateZ(1px) skewX(${angle / 8}deg)`
+                }
+            }
+        })(window, document)
+    </script>
 </body>
 </html>
