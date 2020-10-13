@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .wrap{
+            background-color: red;
+        }
+        ul{
+            font-size: 0; /* 消除换行产生的空格 */
+            list-style: none;
+            /* display: inline-block;
+            vertical-align: middle; */
+            overflow: hidden;
+        }
+        .item{
+            width: 100px;
+            height: 100px;
+            background: pink;
+            text-align: center;
+            line-height: 100px;
+            /* 方法一 使元素去到同一行 */
+            /* display: inline-block; */
+            font-size: 16px; /* 使内部文本可以显示 */
+            /* 方法二 使元素去到同一行 */
+            float: left;
+        }
+        .last{
+            width: 100px;
+            height: 100px;
+            background-color: royalblue;
+            /* display: inline-block;
+            vertical-align: middle; */
+        }
+        /* 清除浮动方式二 */
+        /* .clearfix::after{
+            content: '';
+            display: block;
+            clear: both;
+        } */
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <ul class="clearfix">
+            <li class="item">1</li>
+            <li class="item">2</li>
+            <li class="item">3</li>
+            <li class="item">4</li>
+            <!-- 清除浮动方式一 -->
+            <!-- <li style="clear: both;"></li> -->
+        </ul>
+        <div class="last">5</div>
+    </div>
+</body>
+</html>
