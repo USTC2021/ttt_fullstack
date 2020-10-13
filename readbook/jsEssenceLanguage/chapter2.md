@@ -44,3 +44,11 @@
         (9) ?:
     2. typeof 运算符的值
         number string boolean undefined function object
+
+## 本章难点(解答见其他文章)
+    1. try...catch 语句
+    2. 原型链
+    3. 对象字面量 
+    4. 数组字面量
+    5. 函数字面量
+    6. 正则表达式
