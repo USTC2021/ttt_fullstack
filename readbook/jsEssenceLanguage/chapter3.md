@@ -14,7 +14,7 @@
 - 检验数据类型
     1. typeof
         (1) 返回一个表示数据类型的字符串  
-        number boolean string symbol object undefined function
+            number boolean string symbol object undefined function
         (2) 不能判断array 和 null
         (3) 缺点 
             除 function 以外的对象都会被识别成 object
@@ -140,3 +140,4 @@
     1. javaScript 的数据类型和数据类型检验
     2. 原型与原型链
     3. 减少全局变量污染方法
+    4. 闭包
