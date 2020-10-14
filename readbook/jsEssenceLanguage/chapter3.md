@@ -78,7 +78,65 @@
         var status = flight.status || "unknown"
         var middle = stooge["middle-name"] || "(none)"
 
-- 3.2 更新
+- 3.3 更新
+    对象中的值通过赋值语句更新
+    若属性名存在    属性值被替换
+    若属性名不存在  属性被扩展
+
+- 3.4 引用
+    对象通过引用传递，但不会被拷贝
+
+- 3.5 原型
+    每个对象都连接一个原型对象，并可从中继承属性
+    对象字面量创建的对象都连接到 object.prototype (javaScript 标准的对象)
+    object.beget() 创建一个使用原对象作为其原型的新对象
+    原型连接更新时不起作用，检索值时才被使用
+
+- 3.6 反射
+    处理不需要的属性的方法：
+        1. 程序检查并剔除函数值 (反射的目标是数据)
+        2. object.hasOwnProperty() 对象拥有都有的属性，返回 boolean
+            该方法不会检查原型链
+            flight.hasOwnProperty('number')       // true
+            flight.hasOwnProperty('constructor')  // false
+
+- 3.7 枚举
+    for in 语句  用来遍历一个对象中的所有属性名
+
+- 3.8 删除
+    (1) delete 运算符 删除对象的属性，不会触及原型链中对象
+    (2) 删除对象的属性 可能浮现原型链的属性
+        another_stooge.nickname  // 'Moe'
+        // 删除 another_stooge 的 nickname 属性，暴露出原型的 nickname 属性
+        delete another_stooge.nickname
+        another_stooge.nickname  // 'Curly'
+
+- 3.9 减少全局变量污染
+    javaScript 易保存定义的所有应用资源的全局变量
+    全局变量 削弱程序的灵活性
+    1. 只创建唯一一个全局变量，并定义该变量为当前应用容器，把其他全局变量追加在该命名空间下
+        var MYAPP = {}
+        MYAPP.stooge = {
+            "first-name": 'Jerome', 
+            "last-name": 'Howard'
+        }
+        MYAPP.flight = {
+            airline: "Oceanic",
+            number: 815,
+            departure: {
+                IATA: "SYD",
+                time: "2020-10-13 14:55",
+                city: "Sydney"
+            }
+            arrival: {
+                IATA: "LAX",
+                time: "2020-10-14 10:42",
+                city: "Los Angeles"
+            }
+        }
+    2.. 使用闭包将信息隐藏起来
     
 ## 本章难点(解答见其他文章)
     1. javaScript 的数据类型和数据类型检验
+    2. 原型与原型链
+    3. 减少全局变量污染方法
