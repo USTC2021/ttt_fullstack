@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.bootcdn.net/ajax/libs/weui/2.3.0/style/weui.min.css" rel="stylesheet">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/common.css">
+</head>
+<body>
+    <div class="weui-navbar">
+        <div class="weui-navbar__item weui-bar__item_on">
+            商家信息
+        </div>
+        <div class="weui-navbar__item">
+            菜品
+        </div>
+        <div class="weui-navbar__item">
+            评论
+        </div>
+    </div>
+    <script>
+        // js 事件冒泡
+        // js 事件捕获
+        document.querySelector('.weui-navbar').addEventListener('click', function() {
+            // 第三个参数有什么用？
+            console.log('外面')
+        }, true)
+        // js 事件冒泡
+        document.querySelector('.weui-navbar__item').addEventListener('click', function() {
+            // 第三个参数有什么用？
+            console.log('里面')
+        }, true)
+    </script>
+</body>
+</html>
