@@ -168,16 +168,20 @@ ul li
       border-radius 45px
       width 100%
   &-actors
-    padding 15px 0 5px 15px
+    padding 15px 5px 5px 15px
     h2
       font-weight normal
       margin-bottom 12px
     .movie-actors_desc
       margin-left -8px
+      // 添加滚动条使其左右滑动
+      overflow-x scroll
+      white-space nowrap
+      &::-wekbit-scrollbar
+          display none
       ul
         display flex
         width 100%
-        overflow hidden
         .movie-actors_desc-content
           padding-left 8px
         img 
@@ -188,3 +192,4 @@ ul li
           text-align center
         .role
           color #a2a2a2
+          font-size 14px

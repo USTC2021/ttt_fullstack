@@ -198,7 +198,7 @@ ul li {
   width: 100%;
 }
 .movie-actors {
-  padding: 15px 0 5px 15px;
+  padding: 15px 5px 5px 15px;
 }
 .movie-actors h2 {
   font-weight: normal;
@@ -206,11 +206,15 @@ ul li {
 }
 .movie-actors .movie-actors_desc {
   margin-left: -8px;
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+.movie-actors .movie-actors_desc::-wekbit-scrollbar {
+  display: none;
 }
 .movie-actors .movie-actors_desc ul {
   display: flex;
   width: 100%;
-  overflow: hidden;
 }
 .movie-actors .movie-actors_desc ul .movie-actors_desc-content {
   padding-left: 8px;
@@ -225,4 +229,5 @@ ul li {
 }
 .movie-actors .movie-actors_desc ul .role {
   color: #a2a2a2;
+  font-size: 14px;
 }

@@ -210,22 +210,36 @@
             }
         })
 
-        var touch = document.querySelector('.movie-actors_desc')
-        var handX = 0  // 手指位置
-        var picX = 0  // 盒子位置
+        var box = document.querySelector('.movie-actors_desc')
+        var startX = 0
+        var moveX = 0
+        var stus = true
+        // var handX = 0  // 手指位置
+        // var picX = 0  // 盒子位置
 
-        touch.addEventListener('touchstart', function(event) {
-            handX = event.targetTouches[0].clientX
-            picX = event.offsetLeft
-            console.log(handX, picX)
-        })
-        touch.addEventListener( 'touchmove', function(event){
-            // 计算手指移动的距离
-            var moveX = event.targetTouches[0].clientX - handX;
-            // 盒子距离移动的距离
-            this.style.left = picX +moveX + 'px'
-        })
+        // touch.addEventListener('touchstart', function(event) {
+        //     handX = event.targetTouches[0].clientX
+        //     picX = event.offsetLeft
+        //     console.log(handX, picX)
+        // })
+        // touch.addEventListener( 'touchmove', function(event){
+        //     // 计算手指移动的距离
+        //     var moveX = event.targetTouches[0].clientX - handX;
+        //     // 盒子距离移动的距离
+        //     this.style.left = picX +moveX + 'px'
+        // })
 
+        //开始移动时 要做的事
+        // box.addEventListener('touchstart',function(event){
+        //   startX = event.touches[0].clientX;
+        //   console.log(startX);
+        // })
+			
+			  // //移动过程中 要做的事
+        // box.addEventListener('touchmove',function(event){
+        //   moveX = event.touches[0].clientX - startX;
+        //   console.log(moveX);
+        // })
     </script>
 </body>
 </html>
