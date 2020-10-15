@@ -80,3 +80,68 @@
 .movie-info_desc .info-container .btn-wrap .flex .iconfont {
   font-size: 14px;
 }
+.movie-info_rate {
+  background-color: #16151b;
+  margin-top: 12px;
+  border-radius: 5px;
+  padding: 10px;
+}
+.movie-info_rate .rate-title_left {
+  float: left;
+  font-size: 12px;
+  color: #fff;
+}
+.movie-info_rate .rate-title_right {
+  font-size: 12px;
+  float: right;
+  font-weight: normal;
+  color: #9b9da2;
+}
+.movie-info_rate .rate-title::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.movie-info_rate .rate-detail {
+  padding: 10px;
+  display: flex;
+  width: 100%;
+}
+.movie-info_rate .rate-detail_left {
+  width: 180px;
+  margin-right: 10px;
+  border: 1px solid #478399;
+}
+.movie-info_rate .rate-detail_left .grade {
+  float: left;
+  margin-right: 5px;
+}
+.movie-info_rate .rate-detail_left .grade h3 {
+  color: #e5a50a;
+  font-weight: normal;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+.movie-info_rate .rate-detail_left .grade p {
+  color: #9b9da2;
+  font-size: 12px;
+}
+.movie-info_rate .rate-detail_left .star {
+  float: right;
+}
+.movie-info_rate .rate-detail_left .star .list {
+  display: inline-block;
+  text-decoration: none;
+}
+.movie-info_rate .rate-detail_left::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.movie-info_rate .rate-detail_right {
+  height: 64px;
+  width: 113px;
+}
+.movie-info_rate .rate-detail_right img {
+  width: 100%;
+}

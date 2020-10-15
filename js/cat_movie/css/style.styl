@@ -68,3 +68,57 @@
             //   margin-right 10px
             .iconfont
               font-size 14px
+    &_rate
+      background-color #16151b
+      margin-top 12px
+      border-radius 5px
+      padding 10px
+      .rate-title      
+        &_left
+          float left
+          font-size 12px
+          color #ffffff
+        &_right
+          font-size 12px
+          float right
+          font-weight normal
+          color #9b9da2
+      .rate-title::after
+        content ''
+        display block
+        clear both  
+      .rate-detail
+        padding 10px
+        display flex
+        width 100%
+        &_left
+          width 180px
+          margin-right 10px
+          border 1px solid #478399
+          .grade
+            float left
+            margin-right 5px
+            h3
+              color #e5a50a
+              font-weight normal
+              font-family Arial, sans-serif
+              text-align center
+              // border 1px solid #478399
+            p
+              color #9b9da2
+              font-size 12px
+          .star
+            float right
+            .list
+              display inline-block
+              text-decoration none
+        &_left::after
+          content ''
+          display block
+          clear both  
+        &_right
+          // border 1px solid #478399
+          height 64px
+          width 113px
+          img 
+            width 100%    
