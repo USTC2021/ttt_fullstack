@@ -2,6 +2,9 @@
   margin: 0;
   padding: 0;
 }
+ul li {
+  list-style: none;
+}
 #toast {
   display: none;
 }
@@ -26,7 +29,7 @@
   text-align: center;
 }
 .movie-info {
-  padding: 10px;
+  padding: 15px;
   background-color: #1e2025;
 }
 .movie-info_desc {
@@ -81,67 +84,145 @@
   font-size: 14px;
 }
 .movie-info_rate {
-  background-color: #16151b;
-  margin-top: 12px;
-  border-radius: 5px;
+  background-color: #161619;
   padding: 10px;
+  border-radius: 4px;
+  margin-top: 15px;
+}
+.movie-info_rate .rate-title {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
 }
 .movie-info_rate .rate-title_left {
-  float: left;
-  font-size: 12px;
   color: #fff;
 }
-.movie-info_rate .rate-title_right {
-  font-size: 12px;
-  float: right;
-  font-weight: normal;
-  color: #9b9da2;
+.movie-info_rate .rate-title_left .icon-maoyandianying {
+  color: #f00;
 }
-.movie-info_rate .rate-title::after {
-  content: '';
-  display: block;
-  clear: both;
+.movie-info_rate .rate-title_right {
+  color: #68686b;
 }
 .movie-info_rate .rate-detail {
-  padding: 10px;
   display: flex;
-  width: 100%;
 }
 .movie-info_rate .rate-detail_left {
-  width: 180px;
-  margin-right: 10px;
-  border: 1px solid #478399;
+  flex: 454;
+  display: flex;
 }
 .movie-info_rate .rate-detail_left .grade {
-  float: left;
-  margin-right: 5px;
-}
-.movie-info_rate .rate-detail_left .grade h3 {
-  color: #e5a50a;
-  font-weight: normal;
-  font-family: Arial, sans-serif;
   text-align: center;
+}
+.movie-info_rate .rate-detail_left .grade h2 {
+  color: #fcc300;
 }
 .movie-info_rate .rate-detail_left .grade p {
   color: #9b9da2;
   font-size: 12px;
 }
 .movie-info_rate .rate-detail_left .star {
-  float: right;
+  display: flex;
+  align-items: center;
+  text-align: right;
 }
 .movie-info_rate .rate-detail_left .star .list {
-  display: inline-block;
-  text-decoration: none;
+  display: flex;
+  align-items: center;
+  margin-top: 2px;
 }
-.movie-info_rate .rate-detail_left::after {
-  content: '';
-  display: block;
-  clear: both;
+.movie-info_rate .rate-detail_left .star .list .star-num {
+  font-size: 0;
+  width: 40px;
+}
+.movie-info_rate .rate-detail_left .star .list .star-num img {
+  height: 8px;
+  width: 8px;
+}
+.movie-info_rate .rate-detail_left .star .list .percent {
+  width: 78px;
+  height: 4px;
+  background-color: #252528;
+  position: relative;
+}
+.movie-info_rate .rate-detail_left .star .list .percent .percent-val {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: #fcc300;
+  display: inline-block;
+  width: 80%;
 }
 .movie-info_rate .rate-detail_right {
-  height: 64px;
-  width: 113px;
+  flex: 266;
+  display: flex;
+  align-items: center;
 }
 .movie-info_rate .rate-detail_right img {
+  height: 46px;
+}
+.movie-desc {
+  padding: 15px;
+}
+.movie-desc .line-clamp {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  word-wrap: break-word;
+  word-break: break-all;
+  overflow: hidden;
+}
+.movie-desc .arrow {
+  text-align: center;
+  color: #cfcfcf;
+}
+.movie-desc .arrow .iconfont {
+  display: block;
+  transform: rotateZ(0deg);
+  transition: all 0.5s ease;
+}
+.movie-desc .arrow .up {
+  display: block;
+  transform: rotateZ(180deg);
+}
+.movie-slogan {
+  color: #faf4f7;
+  padding: 12px 5px;
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
+  display: flex;
+  align-items: center;
+}
+.movie-slogan img {
+  border-radius: 45px;
   width: 100%;
+}
+.movie-actors {
+  padding: 15px 0 5px 15px;
+}
+.movie-actors h2 {
+  font-weight: normal;
+  margin-bottom: 12px;
+}
+.movie-actors .movie-actors_desc {
+  margin-left: -8px;
+}
+.movie-actors .movie-actors_desc ul {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+}
+.movie-actors .movie-actors_desc ul .movie-actors_desc-content {
+  padding-left: 8px;
+}
+.movie-actors .movie-actors_desc ul img {
+  height: 100px;
+  width: 77px;
+}
+.movie-actors .movie-actors_desc ul .content {
+  display: block;
+  text-align: center;
+}
+.movie-actors .movie-actors_desc ul .role {
+  color: #a2a2a2;
 }
