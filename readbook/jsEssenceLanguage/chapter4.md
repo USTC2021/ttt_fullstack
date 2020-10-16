@@ -42,12 +42,11 @@
             myObj.increment(2)
             document.writeln(myObj.value)  // 3
         (2) 函数调用模式
-            
         (3) 构造器调用模式
         (4) apply调用模式
         区别：  初始化关键参数 this 上存在差异
 
 ## 本章难点(解答见其他文章)
     1. 闭包
-    2. javascript 调用模式
+    2. javascript 调用模式 (函数调用模式)
     3. javascript 关键字 this
