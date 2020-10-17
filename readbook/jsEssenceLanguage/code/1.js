@@ -77,3 +77,13 @@ var statusObj = {
 
 var status = Quo.prototype.get_status.apply(statusObj)
 console.log(status) // A-ok
+
+// 参数
+var arrSum = function () {
+    var sum = 0
+    for (var i = 0; i < arguments.length; i++) {
+        sum += arguments[i]
+    }
+    return sum
+}
+console.log(arrSum(4, 8, 15, 16, 23, 42)) // 108
