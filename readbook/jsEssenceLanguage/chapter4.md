@@ -42,11 +42,57 @@
             myObj.increment(2)
             document.writeln(myObj.value)  // 3
         (2) 函数调用模式
+            当一个函数不是当做方法使用，而是被当做函数来使用时，其 this 指向全局对象，由此我们就需要定义一个变量并把它赋值为 this，否则就无法实现所需要的功能
+
+            // 定义一个 that，在 helper 函数调用前，把 this 赋值给that，再调用时 this 指向 double
+            // 若不定义 that 的话， helper 函数的 this 指向全局对象
+            myObj.double = function () {
+                var that = this 
+                // console.log(that)  // 1 3
+                
+                // console.log(that.value)
+                var helper = function (){
+                    // console.log(that.value)  // 3
+                    that.value = add(that.value, that.value)
+                }
+
+                helper() // 以函数的形式调用 helper
+                // console.log(helper()) // undefined
+            }
+
+            // 以方法的形式调用 double
+            myObj.double() // undefined
+            console.log(myObj.value) // 6
+
         (3) 构造器调用模式
+            javaScript 基于原型继承的语言 可继承属性 无类别的
+
+            var Quo = function (string) {  // 构造函数
+                this.status = string
+            }
+
+            Quo.prototype.get_status = function () {  // 方法
+                return this.status
+            }
+
+            // 一个函数带上 new 调用，那么将创建一个连接到该函数 的 prototype 成员的新对象，同时 this 也会绑定到这个新对象上
+            var myQuo = new Quo("confused")  // 创建实例，this 绑定到 myQuo
+            console.log(myQuo.get_status())  // confused
+
         (4) apply调用模式
-        区别：  初始化关键参数 this 上存在差异
+            javascript 函数式面向对象编程语言 函数有方法
+            apply 方法  构建一个参数数组，调用函数
+                        接收两个参数 第一个是将被绑定给 this 的值 第二个是参数数组
+
+            var array = [5, 4]
+            var sum = add.apply(null, array)
+            console.log(sum) // 9
+
+        四种模式的区别：  初始化关键参数 this 上存在差异
+
+- 4.4 参数
 
 ## 本章难点(解答见其他文章)
     1. 闭包
-    2. javascript 调用模式 (函数调用模式)
+    2. javascript 调用模式 (函数调用模式、Apply调用模式)
     3. javascript 关键字 this
