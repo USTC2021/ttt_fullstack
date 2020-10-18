@@ -87,3 +87,59 @@ var arrSum = function () {
     return sum
 }
 console.log(arrSum(4, 8, 15, 16, 23, 42)) // 108
+
+
+// 异常
+var numAdd = function(a, b) {
+    if (typeof a !== 'number' || typeof b !== 'number') {
+        throw {  // 抛出一个 exception 对象，传递到 catch 从句
+            name: 'typeError',
+            message: 'add needs numbers'
+        };
+    }
+    return a + b
+}
+
+var try_it = function () {
+    try { // 抛出一个异常，控制权跳到它的 catch 从句
+        numAdd('seven')
+    } catch (e) {
+        console.log(e.name + ': ' + e.message)
+    }
+}
+
+try_it()  // typeError: add needs numbers
+
+// 递归 汉若塔问题
+var hanoi = function (disc, src, aux, dst) {
+    if (disc > 0) {
+        hanoi(disc - 1, src, dst, aux)
+        console.log('move disc ' + disc + ' from ' + src + ' to ' + dst)
+        hanoi(disc - 1, aux, src, dst)
+    }
+}
+hanoi(3, 'src', 'aux', 'dst')
+// 结果
+// move disc 1 from src to dst
+// move disc 2 from src to aux
+// move disc 1 from dst to aux
+// move disc 3 from src to dst
+// move disc 1 from aux to src
+// move disc 2 from aux to dst
+// move disc 1 from src to dst
+
+// 闭包
+var quo = function (status) {  
+    return {
+        get_status: function () {
+            return status
+        }
+    }
+}
+
+// 返回包含 get_status 方法的一个新对象
+// 该对象的一个引用保存在 myQuo 中
+// 即使 quo 已经返回，get_status 方法仍然享有访问 quo 对象 status 属性的特权
+// get_status 方法不是访问该参数的一个拷贝，其访问的就是该参数本身
+var myQuo = quo("amazed")  
+console.log(myQuo.get_status())  // amazed
