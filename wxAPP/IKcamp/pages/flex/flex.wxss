@@ -1,0 +1,29 @@
+/* pages/flex/flex.wxss */
+.section_title {
+    padding: 40rpx;
+}
+.flex-wrp {
+    display: flex;
+}
+.flex-row {
+    flex-direction: row;
+}
+.flex-col {
+    flex-direction: column;
+}
+.flex-item {
+    color: #ffffff;
+    width: 200rpx;
+    height: 200rpx;
+    text-align: center;
+    line-height: 200rpx;
+}
+.bc-green {
+    background-color: #09ba07;
+}
+.bc-red {
+    background-color: #f76160;
+}
+.bc-blue {
+    background-color: rgba(0, 204, 255, 0.733);
+}

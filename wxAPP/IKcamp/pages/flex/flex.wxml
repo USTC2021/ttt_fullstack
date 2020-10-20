@@ -1,0 +1,20 @@
+<!--pages/flex/flex.wxml-->
+<view class="section">
+	<view class="section_title">flex-de
+		irection: row</view>
+	<view class="flex-wrp flex-row">
+		<view class="flex-item bc-green">1</view>
+		<view class="flex-item bc-red">2</view>
+		<view class="flex-item bc-blue">3</view>
+	</view>
+</view>
+<view class="section">
+	<view class="section_title">flex-de
+		irection: column</view>
+	<view class="flex-wrp flex-col">
+		<view class="flex-item bc-green">1</view>
+		<view class="flex-item bc-red">2</view>
+		<view class="flex-item bc-blue">3</view>
+	</view>
+</view>
+
