@@ -1,0 +1,88 @@
+html {
+  color: #111;
+  background: #fff;
+}
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+blockquote {
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: block;
+  margin: 8px;
+  padding-top: 30px;
+}
+body,
+td,
+th {
+  font: 12px Helvetica, Arial, sans-serif;
+  line-height: 1.62;
+}
+h1 {
+  display: block;
+  font-size: 2em;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+h1 {
+  word-wrap: break-word;
+  display: block;
+  font-size: 25px;
+  font-weight: bold;
+  color: #494949;
+  margin: 0;
+  padding: 0 0 15px 0;
+  line-height: 1.1;
+}
+#anony-nav {
+  width: 1080px;
+  margin: 0 auto 25px;
+}
+#anony-nav h1 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 160px;
+  height: 34px;
+  zoom: 1;
+  margin: 0 20px 0 0;
+  padding: 0;
+  font-size: 12px;
+  font-weight: normal;
+  background: url("../img/logo.jpg") no-repeat 0 0;
+  background-image: -webkit-image-set(url("../img/logo.jpg"));
+  background-size: cover;
+  overflow: hidden;
+  a: -webkit-any-link;
+}

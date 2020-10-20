@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>豆瓣</title>
+</head>
+<body class="gray-mode">
+    <!-- 头部导航栏 -->
+    <div id="anony-nav">
+        <h1>
+            <a href="https://www.douban.com">豆瓣</a>
+        </h1>
+        <!-- 搜索 -->
+        <div class="anony-srh">
+            <form action="https://www.douban.com search" method="GET">
+                <span class="inp">
+                    <!-- 
+                        maxlength 输入字段中字符的最大长度
+                        placeholder 帮助用户填写字段的提示
+                        autocomplete 输入字段是否应该启用自动完成功能 
+                    -->
+                    <input type="text" maxlength="60" size="12" placeholder="书籍、电影、音乐、小组、小站、成员" name="q" autocomplete="off">
+                </span>
+                <span class="bt">
+                    <input type="submit" value="搜索">
+                </span>
+            </form>
+        </div>
+        <!-- 导航 -->
+        <div class="anony-nav-link">
+            <ul>
+                <li>
+                    <a href="https://book.douban.com" target="_blank" class="lnk-book">豆瓣读书</a>
+                </li>
+                <li>
+                    <a href="https://movie.douban.com" target="_blank" class="lnk-movie">豆瓣电影</a>
+                </li>
+                <li>
+                    <a href="https://music.douban.com" target="_blank" class="lnk-music">豆瓣音乐</a>
+                </li>
+                <li>
+                    <a href="https://douban.com/location/" target="_blank" class="lnk-events">豆瓣同城</a>
+                </li>
+                <li>
+                    <a href="https://douban.com/group/" target="_blank" class="lnk-group">豆瓣小组</a>
+                </li>
+                <li>
+                    <a href="https://read.douban.com" target="_blank" class="lnk-read">豆瓣阅读</a>
+                </li>
+                <li>
+                    <a href="https://douban.fm" target="_blank" class="lnk-fm">豆瓣FM</a>
+                </li>
+                <li>
+                    <a href="https://time.douban.com/?da_time_source=douban=web_anonymous_index_top_nav" target="_blank" class="lnk-shijian">豆瓣时间</a>
+                </li>
+                <li>
+                    <a href="https://market.douban.com?utm_campain=web_anonymous_top_nav&utm_source=douban&utm_medium=pc_web" target="_blank" class="lnk-market">豆瓣豆品</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
