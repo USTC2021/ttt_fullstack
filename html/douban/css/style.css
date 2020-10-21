@@ -66,6 +66,32 @@ h1 {
   padding: 0 0 15px 0;
   line-height: 1.1;
 }
+a {
+  cursor: pointer;
+}
+a:link {
+  color: #37a;
+  text-decoration: none;
+}
+a:visited {
+  color: #669;
+}
+a:-webkit-any-link {
+  color: -webkit-link;
+  cursor: pointer;
+  text-decoration: underline;
+}
+form {
+  display: block;
+  margin-top: 0em;
+  border: 0px;
+}
+input {
+  -webkit-writing-mode: horizontal-tb !important;
+  text-rendering: auto;
+  color: -internal-light-dark-color(#000, #fff);
+  letter-spacing: normal;
+}
 #anony-nav {
   width: 1080px;
   margin: 0 auto 25px;
@@ -84,5 +110,23 @@ h1 {
   background-image: -webkit-image-set(url("../img/logo.jpg"));
   background-size: cover;
   overflow: hidden;
-  a: -webkit-any-link;
+}
+#anony-nav h1 a {
+  display: block;
+  height: 34px;
+  line-height: 10em;
+}
+#anony-nav .anony-srh {
+  position: relative;
+  display: inline-block;
+  zoom: 1;
+  vertical-align: middle;
+  width: 270px;
+  height: 30px;
+  border: 1px solid #c3c3c3;
+}
+#anony-nav .anony-srh .inp {
+  display: block;
+  height: 30px;
+  overflow: hidden;
 }

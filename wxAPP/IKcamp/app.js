@@ -34,6 +34,11 @@ App({
     })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    user: {
+      // 一般使用单引号，单引号执行比双引号快一点
+      name: '',
+      avator: ''
+    }
   }
 })
