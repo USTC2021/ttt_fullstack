@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Food (name) {
+            this.name = name
+            this.eat = function () {
+                console.log('eat')
+            }
+        }
+        var food = new Food('banana')
+        console.log('food：\n')
+        console.log(food)
+        console.log('Food：\n')
+        console.log(Food)
+        // console.log(Food.prototype.constructor === Food) //true
+    </script>
+</body>
+</html>
