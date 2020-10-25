@@ -174,6 +174,13 @@ li {
 #anony-nav .anony-nav-link ul {
   margin: 0;
 }
+label {
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
 #anony-nav {
   width: 1080px;
   margin: 0 auto 25px;
@@ -344,15 +351,15 @@ li {
   text-align: center;
   cursor: pointer;
 }
-#anony-reg-new .wrapper .login .login-wrap .account-body-tabs ul li .on {
-  border-bottom: 2px solid #494949;
-  color: #333;
-  font-weight: 600;
-}
 #anony-reg-new .wrapper .login .login-wrap .account-body-tabs ul li .account-tab-scan {
   color: #333;
   font-weight: 600px;
   text-align: left;
+}
+#anony-reg-new .wrapper .login .login-wrap .account-body-tabs ul li.on {
+  border-bottom: 2px solid #494949;
+  color: #333;
+  font-weight: 600;
 }
 #anony-reg-new .wrapper .login .login-wrap .account-body-tabs .account-tab-switch {
   width: 100%;
@@ -397,6 +404,75 @@ li {
 }
 #anony-reg-new .wrapper .login .login-wrap .account-tabcon-start .account-form .account-form-raw {
   margin-bottom: 20px;
+}
+#anony-reg-new .wrapper .login .login-wrap .account-tabcon-start .account-form .account-form-raw .account-form-label {
+  float: left;
+  display: block;
+  line-height: 40px;
+  height: 40px;
+  width: 60px;
+  font-size: 13px;
+}
+#anony-reg-new .wrapper .login .login-wrap .account-tabcon-start .account-form .account-form-raw .account-form-field {
+  margin-bottom: 10px;
+  margin: 0;
+  width: 350px;
+  display: inline-block;
+  position: relative;
+}
+#anony-reg-new .wrapper .login .login-wrap .account-tabcon-start .account-form .account-form-raw .account-form-field input {
+  box-shadow: none;
+}
+#anony-reg-new .wrapper .login .login-wrap .account-tabcon-start .account-form .account-form-raw .account-form-field .account-form-input {
+  width: 280px;
+  font-size: 13px;
+  padding: 10px;
+  border-radius: 3px;
+  box-sizing: border-box;
+  border: 1px solid #e4e6e5;
+}
+#anony-reg-new .wrapper .login .login-wrap .account-tabcon-start .account-form .account-form-raw .account-form-field .account-form-field-area-code {
+  width: 50px;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  overflow: hidden;
+}
+#anony-reg-new .wrapper .login .login-wrap .account-tabcon-start .account-form .account-form-raw .account-form-field .account-form-field-area-code .account-form-field-area-code-label {
+  position: relative;
+  padding-right: 5px;
+  line-height: 43px;
+  margin-right: 20px;
+  background-image: url("../img/phone.png");
+}
+#anony-reg-new .wrapper .login .login-wrap .account-tabcon-start .account-form .account-form-raw .account-form-field .account-form-field-area-code .account-form-field-area-code-label::after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  height: 22px;
+  width: 0;
+  right: 1px;
+  border-right: 1 solid;
+  border-color: rgba(0,0,0,0.12);
+}
+#anony-reg-new .wrapper .login .login-wrap .account-tabcon-start .account-form .account-form-raw .account-form-field-phone input {
+  padding-left: 60px;
+  padding-right: 40px;
+}
+#anony-reg-new .wrapper .login .login-wrap .account-tabcon-start .account-form .account-form-raw .account-form-codes {
+  color: #fff;
+  line-height: 40px;
+  position: relative;
+}
+#anony-reg-new .wrapper .login .login-wrap .account-tabcon-start .account-form .account-form-raw .account-form-codes .account-form-field-code {
+  position: absolute;
+  padding: 0 10px;
+  right: 0;
+  top: 0;
+  line-height: 42px;
+}
+#anony-reg-new .wrapper .login .login-wrap .account-tabcon-start .account-form .account-form-raw .account-form-codes .account-form-field-code a {
+  color: #41ac52;
 }
 #anony-reg-new .wrapper .login .login-wrap .account-tabcon-start .account-form .account-form-raw::after {
   content: "";
@@ -448,6 +524,46 @@ li {
 #anony-reg-new .wrapper .login .account-anonymous .account-tabcon-start .account-form .account-form-raw {
   margin-top: 10px;
 }
+#anony-reg-new .wrapper .login .account-anonymous .account-tabcon-start .account-form .account-form-raw .account-form-label {
+  display: none;
+}
+#anony-reg-new .wrapper .login .account-anonymous .account-tabcon-start .account-form .account-form-raw .account-form-field {
+  display: block;
+  width: 100%;
+  position: relative;
+}
+#anony-reg-new .wrapper .login .account-anonymous .account-tabcon-start .account-form .account-form-raw .account-form-field input {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  box-shadow: none;
+  background: #fff;
+}
+#anony-reg-new .wrapper .login .account-anonymous .account-tabcon-start .account-form .account-form-raw .account-form-field #account-form-input {
+  padding-left: 60px;
+  padding-right: 40px;
+}
+#anony-reg-new .wrapper .login .account-anonymous .account-tabcon-start .account-form .account-form-raw .account-form-field .account-form-field-area-code .account-form-field-area-code-label {
+  width: 100%;
+  margin: 0;
+  padding-right: 1px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 36px;
+  background: none;
+  cursor: pointer;
+}
+#anony-reg-new .wrapper .login .account-anonymous .account-tabcon-start .account-form .account-form-raw .account-form-field .account-form-field-area-code .account-form-field-area-code-label::after {
+  top: 6px;
+}
+#anony-reg-new .wrapper .login .account-anonymous .account-tabcon-start .account-form .account-form-raw .account-form-codes {
+  display: block;
+  width: 100%;
+  position: relative;
+}
+#anony-reg-new .wrapper .login .account-anonymous .account-tabcon-start .account-form .account-form-raw .account-form-codes .account-form-field-code {
+  line-height: 35px;
+}
 #anony-reg-new .wrapper:before {
   content: " ";
   position: absolute;
@@ -473,6 +589,23 @@ li {
   word-spacing: -0.43em;
 }
 .app-hide,
-hide {
+.hide {
   display: none;
+}
+input:not([type="image"] i) {
+  box-sizing: border-box;
+}
+input[type=number],
+input[type=password],
+input[type=phone],
+input[type=text],
+textarea {
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: rgba(255,0,0,0);
+  background: transparent;
+}
+a:focus,
+button,
+input {
+  outline: 0;
 }
