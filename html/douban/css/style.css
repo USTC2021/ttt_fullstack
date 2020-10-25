@@ -395,6 +395,13 @@ li {
   margin-bottom: 5px;
   background: none;
 }
+#anony-reg-new .wrapper .login .login-wrap .account-tabcon-start .account-form .account-form-raw {
+  margin-bottom: 20px;
+}
+#anony-reg-new .wrapper .login .login-wrap .account-tabcon-start .account-form .account-form-raw::after {
+  content: "";
+  clear: both;
+}
 #anony-reg-new .wrapper .login .account-anonymous {
   height: 296px;
   min-height: 200px;
@@ -437,6 +444,9 @@ li {
 }
 #anony-reg-new .wrapper .login .account-anonymous .account-tabcon-start .account-form .account-form-error span .hide {
   display: none;
+}
+#anony-reg-new .wrapper .login .account-anonymous .account-tabcon-start .account-form .account-form-raw {
+  margin-top: 10px;
 }
 #anony-reg-new .wrapper:before {
   content: " ";
