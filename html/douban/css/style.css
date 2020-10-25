@@ -68,6 +68,9 @@ h1 {
 }
 a {
   cursor: pointer;
+  text-decoration: none;
+  border: none;
+  -webkit-tap-highlight-color: #000;
 }
 a:link {
   color: #37a;
@@ -75,6 +78,7 @@ a:link {
 }
 a:visited {
   color: #669;
+  text-decoration: none;
 }
 a:-webkit-any-link {
   color: -webkit-link;
@@ -87,10 +91,88 @@ form {
   border: 0px;
 }
 input {
+  writing-mode: horizontal-tb !important;
   -webkit-writing-mode: horizontal-tb !important;
   text-rendering: auto;
   color: -internal-light-dark-color(#000, #fff);
   letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: start;
+  appearance: textfield;
+  background-color: -internal-light-dark(#fff, #3b3b3b);
+  -webkit-rtl-ordering: logical;
+  cursor: text;
+  margin: 0em;
+  font: 400 13.3333px Arial;
+  padding: 1px 2px;
+  border-style: inset;
+  border-color: -internal-light-dark(#767676, #858585);
+  border-image: initial;
+  font-size: 12px;
+  margin-right: 3px;
+  vertical-align: middle;
+}
+input[type="text"i] {
+  padding: 1px 2px;
+}
+input[type="submit"i] {
+  appearance: push-button;
+  user-select: none;
+  white-space: pre;
+  align-items: flex-start;
+  text-align: center;
+  cursor: default;
+  color: -internal-light-dark(#efefef, #3b3b3b);
+  box-sizing: border-box;
+  padding: 1px 6px;
+  border-width: 2px;
+  border-style: outset;
+  border-color: -internal-light-dark(#767676, #858585);
+  border-image: initial;
+}
+input,
+button,
+textarea,
+select,
+optgroup,
+option {
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+}
+input,
+button,
+textarea,
+select {
+  font-size: 100%;
+}
+div {
+  display: block;
+}
+ul {
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+}
+ul,
+ol {
+  list-style: none;
+}
+li {
+  display: list-item;
+  text-align: -webkit-match-parent;
+}
+#anony-nav .anony-nav-link ul {
+  margin: 0;
 }
 #anony-nav {
   width: 1080px;
@@ -129,4 +211,258 @@ input {
   display: block;
   height: 30px;
   overflow: hidden;
+}
+#anony-nav .anony-srh .inp input {
+  width: 240px;
+  border: none;
+  font-size: 13px;
+  height: 20px;
+  padding: 5px;
+}
+#anony-nav .anony-srh .bn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 30px;
+  height: 30px;
+  overflow: hidden;
+  cursor: pointer;
+  background: url("../img/search.png") 50% 50% no-repeat;
+}
+#anony-nav .anony-srh .bn input {
+  border: none;
+  background: transparent;
+  padding-left: 30px;
+  overflow: hidden;
+  width: 30px;
+  height: 30px;
+  font-size: 0;
+  color: transparent;
+  cursor: pointer;
+}
+#anony-nav .anony-nav-link {
+  float: right;
+  margin-top: 6px;
+}
+#anony-nav .anony-nav-link li {
+  display: inline;
+  display: inline-block;
+  zoom: 1;
+  margin: 0 14px 0 0px;
+}
+#anony-nav .anony-nav-link li a {
+  display: inline-block;
+  zoom: 1;
+  width: 40px;
+  height: 20px;
+  overflow: hidden;
+  margin: 0;
+  line-height: 20em;
+  outline: none;
+  vertical-align: middle;
+  background: transparent url("../img/anony_nav_logo.png") no-repeat 100% 100%;
+}
+#anony-nav .anony-nav-link li .lnk-book {
+  background-position: 0 0;
+}
+#anony-nav .anony-nav-link li .lnk-movie {
+  background-position: -59px 0;
+}
+#anony-nav .anony-nav-link li .lnk-music {
+  background-position: -116px 0;
+}
+#anony-nav .anony-nav-link li .lnk-events {
+  background-position: -177px 0;
+}
+#anony-nav .anony-nav-link li .lnk-group {
+  background-position: -235px 0;
+}
+#anony-nav .anony-nav-link li .lnk-read {
+  background-position: -292px 0;
+}
+#anony-nav .anony-nav-link li .lnk-fm {
+  background-position: -350px 0;
+}
+#anony-nav .anony-nav-link li .lnk-shijian {
+  background-position: -410px 0;
+}
+#anony-nav .anony-nav-link li .lnk-market {
+  background-position: -470px 0;
+}
+.wrapper {
+  width: 950px;
+  margin: 0 auto;
+}
+#anony-reg-new .login,
+#anony-reg-new .wrapper .app {
+  z-index: 2;
+}
+.login-quick .account-tabcon-start,
+.login-quick .quick,
+.login-quick .tab-start,
+.login-start .account-tabcon-quick,
+.login-start .start,
+.login-start .tab-quick {
+  display: none;
+}
+#anony-reg-new {
+  background-image: url("https://img9.doubanio.com/view/puppy_image/raw/public/16ad990ec23uwn790d4.jpg");
+  margin-bottom: 25px;
+  background-size: contain;
+  background-position: -webkit-calc(50% - 305px) top;
+  background-position: calc(50% -305px) top;
+  background-repeat: no-repeat;
+  background-color: #edf4ed;
+}
+#anony-reg-new .wrapper {
+  position: relative;
+  padding: 0 0 4px;
+  overflow: visible;
+  zoom: 1;
+}
+#anony-reg-new .wrapper .login {
+  position: relative;
+}
+#anony-reg-new .wrapper .login .login-wrap {
+  width: 300px;
+  height: 300px;
+  border: none;
+}
+#anony-reg-new .wrapper .login .login-wrap .account-body-tabs {
+  margin-bottom: 10px;
+  color: #9b9b9b;
+  font-size: 0;
+}
+#anony-reg-new .wrapper .login .login-wrap .account-body-tabs ul {
+  border-bottom: 1px solid #ececec;
+}
+#anony-reg-new .wrapper .login .login-wrap .account-body-tabs ul li {
+  display: inline-block;
+  width: 50%;
+  font-size: 18px;
+  line-height: 2;
+  text-align: center;
+  cursor: pointer;
+}
+#anony-reg-new .wrapper .login .login-wrap .account-body-tabs ul li .on {
+  border-bottom: 2px solid #494949;
+  color: #333;
+  font-weight: 600;
+}
+#anony-reg-new .wrapper .login .login-wrap .account-body-tabs ul li .account-tab-scan {
+  color: #333;
+  font-weight: 600px;
+  text-align: left;
+}
+#anony-reg-new .wrapper .login .login-wrap .account-body-tabs .account-tab-switch {
+  width: 100%;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  overflow: visible;
+}
+#anony-reg-new .wrapper .login .login-wrap .account-body-tabs .account-tab-switch .account-tab-switch-icon .icon-switch {
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-size: 40px;
+  overflow: visible;
+}
+#anony-reg-new .wrapper .login .login-wrap .account-body-tabs .account-tab-switch .account-tab-switch-icon .quick {
+  background-image: url("../img/quick.png");
+}
+#anony-reg-new .wrapper .login .login-wrap .account-body-tabs .account-tab-switch .account-tab-switch-icon .start {
+  background-image: url("../img/start.png");
+}
+#anony-reg-new .wrapper .login .login-wrap .account-tabcon-start .account-form {
+  position: relative;
+}
+#anony-reg-new .wrapper .login .login-wrap .account-tabcon-start .account-form .account-form-tips {
+  color: #9b9b9b;
+}
+#anony-reg-new .wrapper .login .login-wrap .account-tabcon-start .account-form .account-form-tips a {
+  color: #41ac52;
+  text-decoration: none;
+}
+#anony-reg-new .wrapper .login .login-wrap .account-tabcon-start .account-form .account-form-error {
+  position: absolute;
+  top: -10px;
+  left: 0;
+  min-height: 20px;
+  position: static;
+  margin-bottom: 5px;
+  background: none;
+}
+#anony-reg-new .wrapper .login .account-anonymous {
+  height: 296px;
+  min-height: 200px;
+  max-width: 300px;
+  width: 300px;
+  padding: 30px 10px 10px;
+  overflow: hidden;
+  background: transparent;
+}
+#anony-reg-new .wrapper .login .account-anonymous .account-body-tabs {
+  margin-bottom: 10px;
+}
+#anony-reg-new .wrapper .login .account-anonymous .account-body-tabs ul {
+  border-bottom: 1px solid #ececec;
+}
+#anony-reg-new .wrapper .login .account-anonymous .account-body-tabs ul li {
+  font-size: 13px;
+}
+#anony-reg-new .wrapper .login .account-anonymous .account-body-tabs ul li .on {
+  border-bottom: 1px solid #494949;
+}
+#anony-reg-new .wrapper .login .account-anonymous .account-body-tabs .account-tab-switch .account-tab-switch-icon .icon-switch {
+  height: 30px;
+  width: 30px;
+  background-size: 30px;
+}
+#anony-reg-new .wrapper .login .account-anonymous .account-tabcon-start .account-form {
+  position: relative;
+}
+#anony-reg-new .wrapper .login .account-anonymous .account-tabcon-start .account-form .account-form-tips {
+  margin-bottom: 10px;
+  font-size: 12px;
+}
+#anony-reg-new .wrapper .login .account-anonymous .account-tabcon-start .account-form .account-form-error {
+  width: 100%;
+  position: absolute;
+  top: -60px;
+  display: none;
+  overflow: hidden;
+}
+#anony-reg-new .wrapper .login .account-anonymous .account-tabcon-start .account-form .account-form-error span .hide {
+  display: none;
+}
+#anony-reg-new .wrapper:before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 0;
+  background-repeat: no-repeat;
+  background-position: 0 -150px;
+}
+#anony-reg-new .wrapper:after {
+  content: "\0020";
+  display: block;
+  clear: both;
+}
+#anony-reg-new .login {
+  width: 300px;
+  float: right;
+  font-size: 0;
+  letter-spacing: normal;
+  letter-spacing: -0.31em;
+  word-spacing: -0.43em;
+}
+.app-hide,
+hide {
+  display: none;
 }

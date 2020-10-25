@@ -23,21 +23,21 @@ Page({
   },
   createGroup() {
     const self = this
-    if(self.data.groupName === ''){
+    if (self.data.groupName === '') {
       Notify({
         message: '起个名字吧',
-        duration: 1500,
+        duration: 3000,
         selector: '#notify-selector',
-        backgroundColor: '#dc3545'
-      })
+        background: '#dc3545'
+      });
       self.setData({
         newGroupModal: true
       })
       return
-    }
+    } 
     // 把groupName传给后端
     wx.cloud.callFunction({
-      name: 'createGroup', 
+      name: 'createGroup',
       data: {
         groupName: self.data.groupName
       },
@@ -45,13 +45,13 @@ Page({
         // console.log(res);
         self.setData({
           groupName: ''
-         })
+        })
         Notify({
           message: '新建成功',
           duration: 3000,
           selector: '#notify-selector',
           background: '#28a745'
-        })
+        });
         setTimeout(() => {
           wx.switchTab({
             url: '/pages/group/group'

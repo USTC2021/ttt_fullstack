@@ -44,6 +44,9 @@ h1
 
 a   
     cursor pointer
+    text-decoration none
+    border none 
+    -webkit-tap-highlight-color rgb(0, 0, 0, 0)
 
 a:link 
     color #3377aa
@@ -51,6 +54,7 @@ a:link
 
 a:visited
     color #666699
+    text-decoration none
 
 a:-webkit-any-link // 选择器代表一个有链接锚点的元素 超链接
     color -webkit-link
@@ -65,11 +69,80 @@ form
 input
     // writing-mode 定义文本在水平或垂直方向上如何排布
     // horizontal-tb 水平方向自上而下书写方式 left-right-top-bottom
+    writing-mode horizontal-tb !important
     -webkit-writing-mode horizontal-tb !important
     // text-rendering 定义浏览器渲染引擎如何渲染字体
     text-rendering auto
     color -internal-light-dark-color(black, white)
     letter-spacing normal
+    word-spacing normal
+    text-transform none // 控制文本大小写
+    text-indent 0px
+    text-shadow none
+    display inline-block
+    text-align start
+    appearance textfield // 改变元素的浏览器默认风格 将"input"渲染成"textfield"的风格
+    background-color -internal-light-dark(rgb(255, 255, 255),rgb(59, 59, 59))
+    -webkit-rtl-ordering logical // 覆盖从右到左内容的默认排序
+    cursor text // 光标指示文本
+    margin 0em
+    font 400 13.3333px Arial 
+    padding 1px 2px
+    border-style inset // 定义3D inset边框
+    border-color -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133))
+    border-image initial
+    font-size 12px
+    margin-right 3px
+    vertical-align middle
+
+input[type="text" i]
+    padding 1px 2px
+
+input[type="submit"i]
+    appearance push-button
+    user-select none // 用户是否能够选中文本
+    white-space pre // 设置如何处理元素内的空白  空白会被浏览器保留
+    align-items flex-start
+    text-align center
+    cursor default
+    color -internal-light-dark(rgb(239, 239, 239), rgb(59, 59, 59))
+    box-sizing border-box
+    padding 1px 6px
+    border-width 2px
+    border-style outset 
+    border-color -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133))
+    border-image initial 
+
+input, button, textarea, select, optgroup, option
+    font-family inherit
+    font-size inherit 
+    font-style inherit 
+    font-weight inherit
+
+input, button, textarea, select
+    font-size 100%
+
+div 
+    display block
+
+ul
+    display block
+    list-style-type disc // 设置列表项标记类型 默认实心圆
+    margin-block-start 1em
+    margin-block-end 1em
+    margin-inline-start 0px
+    margin-inline-end 0px
+    padding-inline-start 40px
+
+ul, ol
+    list-style none
+
+li
+    display list-item // 元素会作为列表显示
+    text-align -webkit-match-parent
+
+#anony-nav .anony-nav-link ul 
+    margin 0
 
 #anony-nav
     width 1080px
@@ -106,3 +179,214 @@ input
             display block
             height 30px
             overflow hidden
+            input
+                width 240px
+                border none
+                font-size 13px
+                height 20px
+                padding 5px
+        .bn
+            position absolute
+            right 0
+            top 0
+            width 30px
+            height 30px
+            overflow hidden 
+            cursor pointer
+            background url(../img/search.png) 50% 50% no-repeat
+            input
+                border none
+                background transparent 
+                padding-left 30px
+                overflow hidden
+                width 30px
+                height 30px
+                font-size 0
+                color transparent
+                cursor pointer
+    .anony-nav-link
+        float right
+        margin-top 6px
+        li
+            display inline
+            display inline-block
+            zoom 1
+            margin 0 14px 0 0px
+            a
+                display inline-block
+                zoom 1
+                width 40px
+                height 20px
+                overflow hidden
+                margin 0
+                line-height 20em
+                outline none 
+                vertical-align middle
+                background transparent url(../img/anony_nav_logo.png) no-repeat 100% 100%
+            .lnk-book
+                background-position 0 0 // 设置图像的起始位置 水平位置 垂直位置
+            .lnk-movie
+                background-position -59px 0
+            .lnk-music
+                background-position -116px 0
+            .lnk-events
+                background-position -177px 0
+            .lnk-group
+                background-position -235px 0
+            .lnk-read
+                background-position -292px 0
+            .lnk-fm
+                background-position -350px 0
+            .lnk-shijian
+                background-position -410px 0
+            .lnk-market
+                background-position -470px 0
+
+.wrapper
+    width 950px
+    margin 0 auto
+
+#anony-reg-new .login, #anony-reg-new .wrapper .app
+    z-index 2
+
+.login-quick .account-tabcon-start, .login-quick .quick, .login-quick .tab-start, .login-start .account-tabcon-quick, .login-start .start, .login-start .tab-quick
+    display none
+
+#anony-reg-new
+    background-image url(https://img9.doubanio.com/view/puppy_image/raw/public/16ad990ec23uwn790d4.jpg)
+    margin-bottom 25px
+    background-size contain
+    background-position -webkit-calc(50% - 305px) top
+    background-position calc(50% -305px) top
+    background-repeat no-repeat
+    background-color #edf4ed
+    .wrapper
+        position relative
+        padding 0 0 4px
+        overflow visible
+        zoom 1
+        .login
+            position relative
+            .login-wrap
+                // background-image url(http://accounts.douban.com/passport/login_popup?login_source=anony)
+                width 300px
+                height 300px
+                border none 
+                .account-body-tabs
+                    margin-bottom 10px
+                    color #9b9b9b
+                    font-size 0
+                    ul
+                        border-bottom 1px solid #ececec
+                        li
+                            display inline-block
+                            width 50%
+                            font-size 18px
+                            line-height 2
+                            text-align center
+                            cursor pointer
+                            .on
+                                border-bottom 2px solid #494949
+                                color #333333
+                                font-weight 600
+                            .account-tab-scan
+                                color #333333
+                                font-weight 600px
+                                text-align left 
+                    .account-tab-switch
+                        width 100%
+                        position absolute
+                        top 10px
+                        right 10px
+                        overflow visible
+                        .account-tab-switch-icon
+                            .icon-switch
+                                height 40px
+                                width 40px
+                                position absolute
+                                top 0
+                                right 0
+                                background-size 40px
+                                overflow visible
+                            .quick
+                                background-image url(../img/quick.png)
+                            .start
+                                background-image url(../img/start.png)
+                .account-tabcon-start
+                    .account-form
+                        position relative
+                        .account-form-tips
+                            color #9b9b9b
+                            a
+                                color #41ac52
+                                text-decoration none
+                        .account-form-error
+                            position absolute
+                            top -10px
+                            left 0
+                            min-height 20px
+                            position static
+                            margin-bottom 5px
+                            background none
+                        .account-form-raw
+            .account-anonymous
+                height 296px
+                min-height 200px
+                max-width 300px
+                width 300px
+                padding 30px 10px 10px
+                overflow hidden
+                background transparent
+                .account-body-tabs
+                    margin-bottom 10px
+                    ul
+                        border-bottom 1px solid #ececec
+                        li
+                            font-size 13px
+                            .on
+                                border-bottom 1px solid #494949
+                    .account-tab-switch
+                        .account-tab-switch-icon
+                            .icon-switch
+                                height 30px
+                                width 30px
+                                background-size 30px
+                .account-tabcon-start
+                    .account-form
+                        position relative
+                        .account-form-tips
+                            margin-bottom 10px
+                            font-size 12px
+                        .account-form-error
+                            width 100%
+                            position absolute
+                            top -60px
+                            display none
+                            overflow hidden
+                            span 
+                                .hide
+                                    display none
+    .wrapper:before
+        content " "
+        position absolute
+        top 0
+        bottom 0
+        left 0
+        right 0
+        z-index 0
+        background-repeat no-repeat
+        background-position 0 -150px
+    .wrapper:after
+        content "\0020"
+        display block
+        clear both
+    .login
+        width 300px
+        float right
+        font-size 0
+        letter-spacing normal
+        letter-spacing -.31em
+        word-spacing -.43em
+
+.app-hide, hide 
+    display none

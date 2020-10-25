@@ -32,7 +32,8 @@ Page({
       name: 'getGroup',
       data: {},
       success(res) {
-        console.log(res)
+        console.log(res);
+        // ....
       },
       fail(err) {
         console.log(err)
