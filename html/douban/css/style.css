@@ -1,5 +1,7 @@
 html {
   color: #111;
+  width: 100%;
+  height: 100%;
   background: #fff;
 }
 body,
@@ -66,6 +68,11 @@ h1 {
   padding: 0 0 15px 0;
   line-height: 1.1;
 }
+a:-webkit-any-link {
+  color: -webkit-link;
+  cursor: pointer;
+  text-decoration: underline;
+}
 a {
   cursor: pointer;
   text-decoration: none;
@@ -79,11 +86,6 @@ a:link {
 a:visited {
   color: #669;
   text-decoration: none;
-}
-a:-webkit-any-link {
-  color: -webkit-link;
-  cursor: pointer;
-  text-decoration: underline;
 }
 form {
   display: block;
@@ -296,276 +298,22 @@ label {
 #anony-nav .anony-nav-link li .lnk-market {
   background-position: -470px 0;
 }
-.wrapper {
-  width: 950px;
-  margin: 0 auto;
-}
-#anony-reg-new .login,
-#anony-reg-new .wrapper .app {
-  z-index: 2;
-}
-.login-quick .account-tabcon-start,
-.login-quick .quick,
-.login-quick .tab-start,
-.login-start .account-tabcon-quick,
-.login-start .start,
-.login-start .tab-quick {
-  display: none;
-}
 #anony-reg-new {
-  background-image: url("https://img9.doubanio.com/view/puppy_image/raw/public/16ad990ec23uwn790d4.jpg");
   margin-bottom: 25px;
   background-size: contain;
   background-position: -webkit-calc(50% - 305px) top;
-  background-position: calc(50% -305px) top;
+  background-position: -webkit-calc(50% - 305px) top;
   background-repeat: no-repeat;
   background-color: #edf4ed;
+  background-image: url("../img/account.jpg");
 }
-#anony-reg-new .wrapper {
-  position: relative;
-  padding: 0 0 4px;
-  overflow: visible;
-  zoom: 1;
-}
-#anony-reg-new .wrapper .login {
-  position: relative;
-}
-#anony-reg-new .wrapper .login .login-wrap {
-  width: 300px;
-  height: 300px;
-  border: none;
-}
-#anony-reg-new .wrapper .login .login-wrap .account-body-tabs {
-  margin-bottom: 10px;
-  color: #9b9b9b;
-  font-size: 0;
-}
-#anony-reg-new .wrapper .login .login-wrap .account-body-tabs ul {
-  border-bottom: 1px solid #ececec;
-}
-#anony-reg-new .wrapper .login .login-wrap .account-body-tabs ul li {
-  display: inline-block;
-  width: 50%;
-  font-size: 18px;
-  line-height: 2;
-  text-align: center;
-  cursor: pointer;
-}
-#anony-reg-new .wrapper .login .login-wrap .account-body-tabs ul li .account-tab-scan {
-  color: #333;
-  font-weight: 600px;
-  text-align: left;
-}
-#anony-reg-new .wrapper .login .login-wrap .account-body-tabs ul li.on {
-  border-bottom: 2px solid #494949;
-  color: #333;
-  font-weight: 600;
-}
-#anony-reg-new .wrapper .login .login-wrap .account-body-tabs .account-tab-switch {
-  width: 100%;
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  overflow: visible;
-}
-#anony-reg-new .wrapper .login .login-wrap .account-body-tabs .account-tab-switch .account-tab-switch-icon .icon-switch {
-  height: 40px;
-  width: 40px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  background-size: 40px;
-  overflow: visible;
-}
-#anony-reg-new .wrapper .login .login-wrap .account-body-tabs .account-tab-switch .account-tab-switch-icon .quick {
-  background-image: url("../img/quick.png");
-}
-#anony-reg-new .wrapper .login .login-wrap .account-body-tabs .account-tab-switch .account-tab-switch-icon .start {
-  background-image: url("../img/start.png");
-}
-#anony-reg-new .wrapper .login .login-wrap .account-tabcon-start .account-form {
-  position: relative;
-}
-#anony-reg-new .wrapper .login .login-wrap .account-tabcon-start .account-form .account-form-tips {
-  color: #9b9b9b;
-}
-#anony-reg-new .wrapper .login .login-wrap .account-tabcon-start .account-form .account-form-tips a {
-  color: #41ac52;
-  text-decoration: none;
-}
-#anony-reg-new .wrapper .login .login-wrap .account-tabcon-start .account-form .account-form-error {
-  position: absolute;
-  top: -10px;
-  left: 0;
-  min-height: 20px;
-  position: static;
-  margin-bottom: 5px;
-  background: none;
-}
-#anony-reg-new .wrapper .login .login-wrap .account-tabcon-start .account-form .account-form-raw {
-  margin-bottom: 20px;
-}
-#anony-reg-new .wrapper .login .login-wrap .account-tabcon-start .account-form .account-form-raw .account-form-label {
-  float: left;
+#anony-reg-new .wrapper::after {
+  content: "\0020";
   display: block;
-  line-height: 40px;
-  height: 40px;
-  width: 60px;
-  font-size: 13px;
-}
-#anony-reg-new .wrapper .login .login-wrap .account-tabcon-start .account-form .account-form-raw .account-form-field {
-  margin-bottom: 10px;
-  margin: 0;
-  width: 350px;
-  display: inline-block;
-  position: relative;
-}
-#anony-reg-new .wrapper .login .login-wrap .account-tabcon-start .account-form .account-form-raw .account-form-field input {
-  box-shadow: none;
-}
-#anony-reg-new .wrapper .login .login-wrap .account-tabcon-start .account-form .account-form-raw .account-form-field .account-form-input {
-  width: 280px;
-  font-size: 13px;
-  padding: 10px;
-  border-radius: 3px;
-  box-sizing: border-box;
-  border: 1px solid #e4e6e5;
-}
-#anony-reg-new .wrapper .login .login-wrap .account-tabcon-start .account-form .account-form-raw .account-form-field .account-form-field-area-code {
-  width: 50px;
-  position: absolute;
-  top: 1px;
-  left: 1px;
-  overflow: hidden;
-}
-#anony-reg-new .wrapper .login .login-wrap .account-tabcon-start .account-form .account-form-raw .account-form-field .account-form-field-area-code .account-form-field-area-code-label {
-  position: relative;
-  padding-right: 5px;
-  line-height: 43px;
-  margin-right: 20px;
-  background-image: url("../img/phone.png");
-}
-#anony-reg-new .wrapper .login .login-wrap .account-tabcon-start .account-form .account-form-raw .account-form-field .account-form-field-area-code .account-form-field-area-code-label::after {
-  content: "";
-  position: absolute;
-  top: 6px;
-  height: 22px;
-  width: 0;
-  right: 1px;
-  border-right: 1 solid;
-  border-color: rgba(0,0,0,0.12);
-}
-#anony-reg-new .wrapper .login .login-wrap .account-tabcon-start .account-form .account-form-raw .account-form-field-phone input {
-  padding-left: 60px;
-  padding-right: 40px;
-}
-#anony-reg-new .wrapper .login .login-wrap .account-tabcon-start .account-form .account-form-raw .account-form-codes {
-  color: #fff;
-  line-height: 40px;
-  position: relative;
-}
-#anony-reg-new .wrapper .login .login-wrap .account-tabcon-start .account-form .account-form-raw .account-form-codes .account-form-field-code {
-  position: absolute;
-  padding: 0 10px;
-  right: 0;
-  top: 0;
-  line-height: 42px;
-}
-#anony-reg-new .wrapper .login .login-wrap .account-tabcon-start .account-form .account-form-raw .account-form-codes .account-form-field-code a {
-  color: #41ac52;
-}
-#anony-reg-new .wrapper .login .login-wrap .account-tabcon-start .account-form .account-form-raw::after {
-  content: "";
   clear: both;
 }
-#anony-reg-new .wrapper .login .account-anonymous {
-  height: 296px;
-  min-height: 200px;
-  max-width: 300px;
-  width: 300px;
-  padding: 30px 10px 10px;
-  overflow: hidden;
-  background: transparent;
-}
-#anony-reg-new .wrapper .login .account-anonymous .account-body-tabs {
-  margin-bottom: 10px;
-}
-#anony-reg-new .wrapper .login .account-anonymous .account-body-tabs ul {
-  border-bottom: 1px solid #ececec;
-}
-#anony-reg-new .wrapper .login .account-anonymous .account-body-tabs ul li {
-  font-size: 13px;
-}
-#anony-reg-new .wrapper .login .account-anonymous .account-body-tabs ul li .on {
-  border-bottom: 1px solid #494949;
-}
-#anony-reg-new .wrapper .login .account-anonymous .account-body-tabs .account-tab-switch .account-tab-switch-icon .icon-switch {
-  height: 30px;
-  width: 30px;
-  background-size: 30px;
-}
-#anony-reg-new .wrapper .login .account-anonymous .account-tabcon-start .account-form {
-  position: relative;
-}
-#anony-reg-new .wrapper .login .account-anonymous .account-tabcon-start .account-form .account-form-tips {
-  margin-bottom: 10px;
-  font-size: 12px;
-}
-#anony-reg-new .wrapper .login .account-anonymous .account-tabcon-start .account-form .account-form-error {
-  width: 100%;
-  position: absolute;
-  top: -60px;
-  display: none;
-  overflow: hidden;
-}
-#anony-reg-new .wrapper .login .account-anonymous .account-tabcon-start .account-form .account-form-error span .hide {
-  display: none;
-}
-#anony-reg-new .wrapper .login .account-anonymous .account-tabcon-start .account-form .account-form-raw {
-  margin-top: 10px;
-}
-#anony-reg-new .wrapper .login .account-anonymous .account-tabcon-start .account-form .account-form-raw .account-form-label {
-  display: none;
-}
-#anony-reg-new .wrapper .login .account-anonymous .account-tabcon-start .account-form .account-form-raw .account-form-field {
-  display: block;
-  width: 100%;
-  position: relative;
-}
-#anony-reg-new .wrapper .login .account-anonymous .account-tabcon-start .account-form .account-form-raw .account-form-field input {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  box-shadow: none;
-  background: #fff;
-}
-#anony-reg-new .wrapper .login .account-anonymous .account-tabcon-start .account-form .account-form-raw .account-form-field #account-form-input {
-  padding-left: 60px;
-  padding-right: 40px;
-}
-#anony-reg-new .wrapper .login .account-anonymous .account-tabcon-start .account-form .account-form-raw .account-form-field .account-form-field-area-code .account-form-field-area-code-label {
-  width: 100%;
-  margin: 0;
-  padding-right: 1px;
-  text-align: center;
-  font-size: 15px;
-  font-weight: 700;
-  line-height: 36px;
-  background: none;
-  cursor: pointer;
-}
-#anony-reg-new .wrapper .login .account-anonymous .account-tabcon-start .account-form .account-form-raw .account-form-field .account-form-field-area-code .account-form-field-area-code-label::after {
-  top: 6px;
-}
-#anony-reg-new .wrapper .login .account-anonymous .account-tabcon-start .account-form .account-form-raw .account-form-codes {
-  display: block;
-  width: 100%;
-  position: relative;
-}
-#anony-reg-new .wrapper .login .account-anonymous .account-tabcon-start .account-form .account-form-raw .account-form-codes .account-form-field-code {
-  line-height: 35px;
-}
-#anony-reg-new .wrapper:before {
-  content: " ";
+#anony-reg-new .wrapper::before {
+  content: "";
   position: absolute;
   top: 0;
   bottom: 0;
@@ -575,25 +323,221 @@ label {
   background-repeat: no-repeat;
   background-position: 0 -150px;
 }
-#anony-reg-new .wrapper:after {
-  content: "\0020";
-  display: block;
-  clear: both;
+.wrapper {
+  width: 950px;
+  margin: 0 auto;
+}
+#anony-reg-new .wrapper {
+  position: relative;
+  padding: 0 0 4px;
+  overflow: visible;
+  zoom: 1;
 }
 #anony-reg-new .login {
   width: 300px;
   float: right;
-  font-size: 0;
   letter-spacing: normal;
-  letter-spacing: -0.31em;
-  word-spacing: -0.43em;
+  word-spacing: normal;
+}
+#anony-reg-new .wrapper .login,
+#anony-reg-new .wrapper .app {
+  z-index: 2;
+}
+#anony-reg-new .wrapper .login {
+  position: relative;
+}
+.account-body {
+  max-width: 750px;
+  margin: auto;
+  padding: 20px 15px;
+  min-height: 450px;
+  width: 340px;
+  padding: 50px 30px 100px;
+  overflow: hidden;
+  position: relative;
+  background: #fff;
+}
+.account-body,
+.account-body h2 {
+  box-sizing: border-box;
+  width: 100%;
+}
+.account-anonymous {
+  height: 296px;
+  min-height: 200px;
+  max-width: 300px;
+  width: 300px;
+  padding: 30px 10px 10px;
+  overflow: hidden;
+  background: transparent;
+}
+.account-body-tabs {
+  margin-bottom: 10px;
+  color: #9b9b9b;
+  font-size: 0;
+}
+.account-anonymous .account-body-tabs {
+  margin-bottom: 10px;
+}
+.account-body-tabs ul {
+  border-bottom: 1px solid #ececec;
+}
+.account-anonymous .account-body-tabs ul {
+  border-bottom: 1px solid #ececec;
+}
+.account-body-tabs ul li {
+  display: inline-block;
+  width: 50%;
+  font-size: 18px;
+  line-height: 2;
+  text-align: center;
+  cursor: pointer;
+}
+.account-body-tabs ul li.on {
+  border-bottom: 2px solid #494949;
+  color: #333;
+  font-weight: 600;
+}
+.account-anonymous .account-body-tabs ul li {
+  font-size: 13px;
+}
+.account-anonymous .account-body-tabs ul li.on {
+  border-bottom: 1px solid #494949;
+}
+.login-quick .account-tabcon-start,
+.login-quick .quick,
+.login-quick .tab-start,
+.login-start .account-tabcon-quick,
+.login-start .start,
+.login-start .tab-quick {
+  display: none;
+}
+.account-body-tabs ul li.account-tab-scan {
+  color: #333;
+  font-weight: 600;
+  text-align: left;
+}
+.account-body-tabs .account-tab-switch {
+  width: 100%;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  overflow: visible;
+}
+.account-body-tabs .account-tab-switch-icon .icon-switch {
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-size: 40px;
+  overflow: visible;
+}
+.account-anonymous .account-tab-switch-icon .icon-switch {
+  height: 30px;
+  width: 30px;
+  background-size: 30px;
+}
+.account-body-tabs .account-tab-switch-icon .icon-switch.quick {
+  background-image: url("../img/quick.png");
+}
+.account-body-tabs .account-tab-switch-icon .icon-switch.start {
+  background-image: url("../img/start.png");
+}
+.account-form {
+  position: relative;
+}
+.account-anonymous .account-form {
+  position: relative;
+}
+.account-form-tips {
+  color: #9b9b9b;
+}
+.account-anonymous .account-form-tips {
+  margin-bottom: 10px;
+  font-size: 12px;
+}
+.account-form-tips a {
+  color: #41ac52;
+  text-decoration: none;
+}
+.account-form-error {
+  position: absolute;
+  top: -10px;
+  left: 0;
+  min-height: 20px;
+  margin-bottom: 5px;
+  background: none;
+}
+.account-anonymous .account-form-error {
+  width: 100%;
+  position: absolute;
+  top: -60px;
+  display: none;
+  overflow: hidden;
 }
 .app-hide,
 .hide {
   display: none;
 }
-input:not([type="image"] i) {
+.account-anonymous .account-form-error span.hide {
+  display: none;
+}
+.account-form-raw::after {
+  content: "";
+  clear: both;
+}
+.account-form-raw {
+  margin-bottom: 20px;
+  position: relative;
+}
+.account-anonymous .account-form-raw {
+  margin-bottom: 10px;
+}
+label {
+  cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.account-form-label {
+  float: left;
+  display: block;
+  line-height: 40px;
+  height: 40px;
+  width: 60px;
+  font-size: 13px;
+}
+.account-anonymous .account-form-label {
+  display: none;
+}
+.account-form-field {
+  margin-bottom: 10px;
+  margin: 0;
+  width: 350px;
+  display: inline-block;
+}
+.account-anonymous .account-form-field {
+  display: block;
+  width: 100%;
+  position: relative;
+}
+input:not([type="image"i]) {
   box-sizing: border-box;
+}
+a.focus,
+button,
+input {
+  outline: 0;
+}
+.account-form-input {
+  width: 280px;
+  font-size: 13px;
+  padding: 10px;
+  border-radius: 3px;
+  box-sizing: border-box;
+  border: 1px solid #e4e6e5;
 }
 input[type=number],
 input[type=password],
@@ -604,8 +548,377 @@ textarea {
   -webkit-tap-highlight-color: rgba(255,0,0,0);
   background: transparent;
 }
-a:focus,
-button,
-input {
+.account-form-field-phone input {
+  padding-left: 60px;
+  padding-right: 40px;
+}
+.account-form-field input {
+  box-shadow: none;
+}
+.account-anonymous .account-form-field input {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  box-shadow: none;
+  background: #fff;
+}
+.account-form-field-area-code {
+  top: 1px;
+  left: 1px;
+  width: 50px;
+  position: absolute;
+  overflow: hidden;
+}
+.account-form-field-area-code-label::after {
+  content: "";
+  position: absolute;
+  right: 1px;
+  top: 8px;
+  height: 22px;
+  width: 0;
+  border-color: #000;
+  border-right: 1px solid #e0e0e0;
+}
+.account-anonymous .account-form-field-area-code-label::after {
+  top: 6px;
+}
+.account-form-field-area-code-label {
+  position: relative;
+  padding-right: 5px;
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 40px;
+  background: none;
+  cursor: pointer;
+}
+.account-anonymous .account-form-field-area-code-label {
+  padding-right: 1px;
+  line-height: 36px;
+}
+.account-form-codes {
+  color: #fff;
+  line-height: 40px;
+  position: relative;
+}
+.account-form-codes .account-form-input {
+  padding: 10px;
+}
+.account-form-codes .account-form-field-code {
+  position: absolute;
+  padding: 0 10px;
+  right: 0;
+  top: 0;
+  line-height: 42px;
+}
+.account-anonymous .account-form-codes .account-form-field-code {
+  line-height: 35px;
+}
+.account-form-codes .account-form-field-code a {
+  color: #41ac52;
+  line-height: 42px;
+}
+.account-form-field-submit {
+  position: relative;
+  width: 280px;
+  margin-left: 60px;
+  padding-top: 20px;
+}
+.account-anonymous .account-form-field-submit {
+  padding: 0;
+  margin: 0;
+}
+.account-form .btn {
+  display: block;
+  height: 36px;
+  padding: 0 35px;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 36px;
+  text-align: center;
   outline: 0;
+  cursor: default;
+  background-color: rgba(66,189,86,0.5);
+}
+.account-form-field-submit .btn {
+  display: block;
+  padding: 0;
+  font-weight: 600;
+  font-size: 15px;
+}
+.account-anonymous .account-form-field-submit .btn {
+  height: 34px;
+  line-height: 34px;
+  font-weight: 400px;
+}
+.account-form-ft::after {
+  content: "";
+  clear: both;
+}
+.account-form-ft {
+  overflow: hidden;
+}
+.account-form-link {
+  float: right;
+}
+.account-form-ft p {
+  margin: 10px 0;
+}
+.account-form-link a {
+  color: #41ac52;
+}
+.account-form-3rd {
+  width: 280px;
+  position: absolute;
+  bottom: 30px;
+}
+.account-form-3rd-anonymous {
+  border-top: 1px solid #ddd;
+  position: relative;
+  top: 0;
+}
+.account-anonymous .account-form-3rd {
+  width: 100%;
+}
+.account-form-3rd-hd::after,
+.account-form-3rd-hd::before {
+  content: "";
+  background: #ddd;
+  margin-top: 9px;
+  width: 36%;
+  height: 1px;
+  overflow: hidden;
+}
+.account-form-3rd-hd::after {
+  float: right;
+}
+.account-form-3rd-anonymous .account-form-3rd-hd::after,
+.account-form-3rd-anonymous .account-form-3rd-hd::before {
+  display: none;
+}
+.account-form-3rd-hd::before {
+  float: left;
+}
+.account-form-3rd-hd {
+  color: #9b9b9b;
+  font-size: 11px;
+  text-align: center;
+}
+.account-form-3rd-anonymous .account-form-3rd-hd {
+  display: inline-block;
+}
+.account-form-3rd-bd {
+  padding-top: 5px;
+  text-align: center;
+}
+.account-form-3rd-anonymous .account-form-3rd-bd {
+  display: inline-block;
+}
+.account-form-3rd-bd a {
+  display: inline-block;
+  vertical-align: middle;
+  width: 36px;
+  height: 36px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-size: 100% 100%;
+  overflow: hidden;
+  line-height: 36px;
+  font-size: 0;
+  margin: 15px;
+}
+.account-form-3rd-bd .link-3rd-wx,
+.account-form-3rd-bd .link-3rd-wx:hover {
+  background-image: url("../img/weixin.png");
+}
+.account-anonymous .account-form-3rd-bd a {
+  height: 22px;
+  width: 22px;
+  margin: 0 0 0 12px;
+}
+.account-form-3rd-bd .link-3rd-wb,
+.account-form-3rd-bd .link-3rd-wb:hover {
+  background-image: url("../img/weibo.png");
+}
+.account-qr-code {
+  margin-top: 20px;
+  text-align: center;
+  position: relative;
+}
+.account-qr-scan {
+  display: inline-block;
+  height: 172px;
+  width: 172px;
+  text-align: center;
+  line-height: 172px;
+}
+.account-anonymous .account-qr-scan {
+  height: 170px;
+  width: 170px;
+}
+.account-qr-text {
+  display: inline-block;
+  padding-left: 45px;
+  margin-top: 20px;
+  color: #494949;
+  font-size: 13px;
+  line-height: 1.5px;
+  text-align: left;
+  background-size: 29px;
+  background-position: 0;
+  background-repeat: no-repeat;
+}
+.account-anonymous .account-qr-text {
+  border-radius: 12px;
+  margin-top: 10px;
+  padding: 3px 20px;
+  color: #494949;
+  background-color: rgba(0,0,0,0.08);
+  background-image: none;
+}
+.account-qr-fail::before {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  opacity: 0.9;
+  -wekit-opacity: opacity(50);
+  filter: opacity(50);
+  background: #fff;
+}
+.account-qr-fail {
+  height: 172px;
+  width: 172px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -86px;
+  z-index: 10;
+}
+.account-qr-fail span {
+  display: block;
+  margin: 50px 0 10px;
+  color: #000;
+  font-size: 15px;
+  position: relative;
+  z-index: 11;
+}
+.account-qr-fail a.btn {
+  border-radius: 3px;
+  padding: 5px 15px;
+  color: #fff;
+  font-size: 14px;
+  background: #41ac52;
+  position: relative;
+  z-index: 11;
+}
+.account-qr-success {
+  text-align: center;
+}
+.account-anonymous .account-qr-success-hd {
+  margin: 15px 0 6px;
+  font-size: 18px;
+  font-weight: 600;
+}
+.account-anonymous .account-qr-success-bd {
+  margin-bottom: 12px;
+  font-size: 12px;
+}
+.account-qr-success-bd-text {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+.account-qr-success-bd-pic {
+  height: 134px;
+  width: 86px;
+  display: inline-block;
+  margin-bottom: 20px;
+  background-size: 100%;
+  background-image: url("../img/successful.png");
+  background-repeat: no-repeat;
+  vertical-align: middle;
+}
+.account-anonymous .account-qr-success-bd-pic {
+  height: 117px;
+  width: 72px;
+  margin-bottom: 15px;
+}
+.account-qr-success-bd-link a {
+  color: #41ac52;
+  font-size: 14px;
+}
+.account-anonymous .account-qr-success-bd-link a {
+  font-size: 11px;
+}
+.account-qr-link {
+  width: 100%;
+  color: #ccc;
+  text-align: center;
+  position: absolute;
+  bottom: 35px;
+  left: 0;
+}
+.account-anonymous .account-qr-link {
+  display: none;
+}
+.account-qr-link a {
+  color: #494949;
+  font-size: 13px;
+}
+.account-qr-link span {
+  padding: 0 5px;
+}
+.captcha-error {
+  color: #989898;
+  font-size: 12px;
+}
+.captcha-error.fixed {
+  width: 100%;
+  padding: 3px 0;
+  text-indent: 10px;
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  z-index: 0;
+  background: rgba(255,255,255,0.5);
+}
+.captcha-error a {
+  color: #41ac52;
+}
+.ui-dialog-mountnode {
+  display: none;
+}
+.ui-dialog-mask::before {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 1px;
+  overflow: hidden;
+  margin-left: -1px;
+  vertical-align: middle;
+}
+.ui-dialog-mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  text-align: center;
+  font-size: 0;
+  padding: 20px 0;
+  overflow-x: none;
+  overflow: auto;
+  z-index: 100;
+  background-color: rgba(0,0,0,0.5);
+}
+.ui-dialog-mountnode .ui-dialog-mask {
+  background: rgba(0,0,0,0.08);
 }

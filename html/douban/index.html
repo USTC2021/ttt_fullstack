@@ -107,27 +107,71 @@
                            </div>
                            <div class="nation-select hide"></div>
                            <div class="account-form-raw">
-                               <label class="account-form-label">验证码</label>
+                               <label class="account-form-label">验证码：</label>
                                <div class="account-form-field account-form-codes">
                                    <input type="text" id="code" class="account-form-input" name="code" maxlength="6" placeholder="验证码" tabindex="2" autocomplete="off">
                                    <div class="account-form-field-code">
-                                        <a href="javacscript:;">获取验证码</a>
+                                      <a href="javascript:;">获取验证码</a>
                                    </div>
                                </div>
                            </div>
-                           <div class="account-form-field-submit"></div>
+                           <div class="account-form-field-submit">
+                              <a href="javascript:;" class="btn btn-phone">登陆豆瓣</a>
+                           </div>
                        </div>
-                       <div class="account-form-ft"></div>
-                       <div class="account-form-3rd account-form-3rd-anonymous"></div>
+                       <div class="account-form-ft">
+                          <p class="account-form-link">
+                            <a href="https://help.douban.com/account?app=1#t1-q5" class="help-link" target="_blank" data-action="login_phone_nocode">收不到验证码</a>
+                          </p>
+                       </div>
+                       <div class="account-form-3rd account-form-3rd-anonymous">
+                         <div class="account-form-3rd-hd">第三方登录：</div>
+                         <div class="account-form-3rd-bd">
+                          <a href="https://www.douban.com/accounts/connect/wechat/?from=&amp;redir=/" class="link-3rd-wx link-3rd-wx-on" target="_top" title="用微信登录">wechat</a>
+                          <a href="https://www.douban.com/accounts/connect/sina_weibo/?from=&amp;redir=/&amp;fallback=" class="link-3rd-wb link-3rd-wb-on" target="_top" title="用微博登录">weibo</a>
+                        </div>
+                       </div>
                    </div>
-                   <div class="account-tabcon-quick account-quick"></div>
-                   <div class="captcha-error hide fixed"></div>
+                   <div class="account-tabcon-quick account-quick">
+                     <div class="account-qr-code">
+                        <div class="account-qr-scan">加载中...</div>
+                        <div class="account-qr-text">请打开豆瓣客户端扫一扫</div>
+                        <div class="account-qr-fail hide">
+                          <span>登录失败</span>
+                          <a href="javascript:;" class="btn btn-refresh account-qr-refresh">点击刷新</a>
+                       </div>
+                     </div>
+                     <div class="account-qr-success hide">
+                        <div class="account-qr-success-hd">扫描成功！</div>
+                        <div class="account-qr-success-bd">
+                          <div class="account-qr-success-bd-text">请在手机上确定登录</div>
+                          <div class="account-qr-success-bd-pic"></div>
+                          <div class="account-qr-success-bd-link">
+                            <a href="javascript:;">返回二维码登录</a>
+                          </div>
+                        </div>
+                     </div>
+                     <div class="account-qr-link">
+                       <a href="" class="link-phone">短信登录/注册</a>
+                       <span>|</span>
+                       <a href="" class="link-account">密码登录</a>
+                     </div>
+                   </div>
+                   <div class="captcha-error hide fixed">
+                     登录出现问题
+                     <a href="javascript:;" data-action="captch_error">反馈并刷新</a>
+                   </div>
+               </div>
+               <div></div>
+               <div class="ui-dialog-mountnode">
+                 <div class="ui-dialog-mask"></div>
                </div>
            </div>
            <div class="app"></div>
        </div> 
     </div>
-    <script type="text/javascript" src="https://img3.doubanio.com/f/accounts/0d89968f657dd00590944957e19a943e13ecb266/js/ui/dialog.js" async="true"></script>
+    
+    <!-- <script type="text/javascript" src="https://img3.doubanio.com/f/accounts/0d89968f657dd00590944957e19a943e13ecb266/js/ui/dialog.js" async="true"></script>
     <script type="text/javascript" src="https://img3.doubanio.com/f/accounts/c5268df4c1f0bada95cb3d2b80089a50b494b5ee/js/lib/jquery.min.js" async="true"></script>
     <script type="text/html" id="template-global-phone">
         <ul class="GlobalPhoneList">
@@ -339,8 +383,8 @@
           <a href="javascript:;" class="btn btn-phone">登录豆瓣</a>
         </div>
       
-      </script>
-      <script type="text/template" id="tmpl_account">
+    </script>
+    <script type="text/template" id="tmpl_account">
         <div class="account-form-error"><span class="hide"> </span></div>
           <div class="account-form-tips t-right"><a target="_blank" href="https://accounts.douban.com/passport/get_password" class="fwd-link">找回密码</a></div>
         
@@ -366,8 +410,8 @@
           <a href="javascript:;" class="btn btn-account">登录豆瓣</a>
         </div>
       
-      </script>
-      <script type="text/template" id="tmpl_abroad">
+    </script>
+    <script type="text/template" id="tmpl_abroad">
         <div class="account-form-error"><span class="hide"> </span></div>
           <div class="account-form-tips t-right"><a target="_blank" href="https://accounts.douban.com/passport/get_password" class="fwd-link">找回密码</a></div>
         
@@ -397,8 +441,8 @@
           <a href="javascript:;" class="btn btn-account">登录豆瓣</a>
         </div>
       
-      </script>
-      <script type="text/template" id="tmpl_agreement">
+    </script>
+    <script type="text/template" id="tmpl_agreement">
         <div class="agreement-new">
           
       <div class="agreement-content">
@@ -739,10 +783,10 @@
       </div>
       
         </div>
-      </script>
-      <script type="text/javascript" src="https://img3.doubanio.com/f/accounts/c5268df4c1f0bada95cb3d2b80089a50b494b5ee/js/lib/jquery.min.js"></script>
-      <script type="text/javascript" src="https://img3.doubanio.com/f/accounts/bbd909b4dd82f6e1c664380ff01325ec129436a1/js/lib/do.js" data-cfg-corelib="https://img3.doubanio.com/f/accounts/c5268df4c1f0bada95cb3d2b80089a50b494b5ee/js/lib/jquery.min.js"></script>
-      <script src="https://img3.doubanio.com/f/accounts/bce7361d8d6239a0ded6ddd9fbd088db6266650a/passport/build/lib/polyfill.min.js"></script>
-      <script src="https://img3.doubanio.com/f/accounts/c944ce36e72f90ebe6f2fa9db0267383daffa354/passport/build/login/base.js"></script>
+    </script> -->
+    <!-- <script type="text/javascript" src="https://img3.doubanio.com/f/accounts/c5268df4c1f0bada95cb3d2b80089a50b494b5ee/js/lib/jquery.min.js"></script>
+    <script type="text/javascript" src="https://img3.doubanio.com/f/accounts/bbd909b4dd82f6e1c664380ff01325ec129436a1/js/lib/do.js" data-cfg-corelib="https://img3.doubanio.com/f/accounts/c5268df4c1f0bada95cb3d2b80089a50b494b5ee/js/lib/jquery.min.js"></script>
+    <script src="https://img3.doubanio.com/f/accounts/bce7361d8d6239a0ded6ddd9fbd088db6266650a/passport/build/lib/polyfill.min.js"></script>
+    <script src="https://img3.doubanio.com/f/accounts/c944ce36e72f90ebe6f2fa9db0267383daffa354/passport/build/login/base.js"></script> -->
 </body>
 </html>
