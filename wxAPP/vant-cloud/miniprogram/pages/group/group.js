@@ -32,8 +32,11 @@ Page({
       name: 'getGroup',
       data: {},
       success(res) {
-        console.log(res);
+        console.log(res.result);
         // ....
+        self.setData({
+          groupList: res.result
+        })
       },
       fail(err) {
         console.log(err)
