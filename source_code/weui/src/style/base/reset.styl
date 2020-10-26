@@ -1,0 +1,23 @@
+@import "fn"
+
+html
+    -ms-text-size-adjust 100% // 阻止用户在 web 界面放大或缩小
+    -webkit-text-size-adjust 100%
+
+body
+    line-height 1.6
+    font-family $weuiFontDefault
+
+*
+    margin 0
+    padding 0
+
+a img 
+    border 0
+
+a
+    text-decoration none
+    setTapColor()
+
+input, textarea 
+    caret-color $weuiColorPrimary  // 定义插入光标的颜色
