@@ -37,13 +37,13 @@ var insertBits = function (N, M, i, j) {
             insertA = a.slice(lena - i - temp, lena -j)
             rightA = a.slice(lena - j)
         }
+        // 插入区的字符串异或计算
+        
         // 将分割字符串按要求连接
         result = leftA.concat(b).concat(rightA)
         // console.log(result)
         console.log(leftA, ' ' + insertA, ' ' + rightA)
     }
-    // 插入区的字符串异或计算
-    (parseInt(a) ) ^ (parseInt(b) ) 
     // 将二进制转成十进制 数字
     console.log(result)
     return parseInt(result, 2)
