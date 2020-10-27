@@ -1,3 +1,12 @@
+/**
+ * leetcode面试题05.01. 插入
+ * @param {number} M
+ * @param {number} N
+ * @param {number} i
+ * @param {number} j
+ * @return {number}
+ */
+
 var insertBits = function (N, M, i, j) {
     // 将两个整数转换成二进制 此时a，b为字符串
     var a = N.toString(2)
