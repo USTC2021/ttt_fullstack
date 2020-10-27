@@ -2,50 +2,58 @@ var insertBits = function (N, M, i, j) {
     // 将两个整数转换成二进制 此时a，b为字符串
     var a = N.toString(2)
     var b = M.toString(2)
-    console.log(a,','+b)
+    // console.log(a,','+b)
     // 获取字符串a长度
     var lena = a.length
     var lenb = b.length
-    var len = Math.abs(i - j)
-    console.log(lena, lenb)
+    var len = Math.abs(i - j) + 1
+    // console.log(lena, lenb)
     // 分割字符串 合并字符串 
-    var leftA, rightA, insertA, result, temp = 0
-    console.log(lena - i, lena - j)
+    var leftA, rightA, insertA, result
+    // console.log(lena - i, lena - j)
     if (lenb < len){
         b = b.padStart(len, '0')
-        console.log(len, b)
+        // console.log(len, b)
     }
-    if (lenb > len) {
-        temp = lenb - len
-    }
-    console.log(b)
+    // console.log(b)
     if (lena - i == 0) {
-        insertA = a.slice(0, lena - j + temp)
-        rightA = a.slice(lena - j + temp)
+        insertA = a.slice(0, lena - j)
+        rightA = a.slice(lena - j)
         result = b.concat(rightA)
     } else if (lena - j == 0) {
-        insertA = a.slice(0, lena - i + temp)
-        rightA = a.slice(lena - i + temp)
+        insertA = a.slice(0, lena - i)
+        rightA = a.slice(lena - i)
         result = b.concat(rightA)
     } else {
         if (i < j) {
-            leftA = a.slice(0, lena - j - temp)
-            insertA = a.slice(lena - j - temp, lena - i)
+            leftA = a.slice(0, lena - j - 1)
+            insertA = a.slice(lena - j, lena - i)
             rightA = a.slice(lena - i)
+            // console.log(lena - i, lena - j)
         } else {
-            leftA = a.slice(0, lena - i - temp)
-            insertA = a.slice(lena - i - temp, lena -j)
+            leftA = a.slice(0, lena - i - 1)
+            insertA = a.slice(lena - i, lena -j)
             rightA = a.slice(lena - j)
         }
-        // 插入区的字符串异或计算
-        
         // 将分割字符串按要求连接
         result = leftA.concat(b).concat(rightA)
         // console.log(result)
-        console.log(leftA, ' ' + insertA, ' ' + rightA)
+        // console.log(leftA, ' ' + insertA, ' ' + rightA)
     }
-    // 将二进制转成十进制 数字
-    console.log(result)
+    if (lena < i || lena <j) {
+        // 获取i和j的最大值 最小值
+        var maxNum = Math.max(i, j)
+        var minNum = Math.min(i, j)
+        a = a.padStart(maxNum, '0')
+        // console.log(a)
+        // console.log(maxNum, minNum)
+        insertA = a.slice(0, maxNum - minNum)
+        rightA = a.slice(maxNum - minNum)
+        // console.log(insertA, ' ' + rightA)
+        result = b.concat(rightA)
+        // console.log(result, result.length)
+    }
+    // console.log(result)
     return parseInt(result, 2)
 }
 
@@ -60,3 +68,6 @@ console.log(insertBits(N, M, i, j)) // 2082885133
 
 var N = 2032243561, M = 10, i = 24, j = 29
 console.log(insertBits(N, M, i, j)) // 1243714409
+
+var N = 126194517, M = 2982082, i = 9, j = 30
+console.log(insertBits(N, M, i, j)) // 1526826325

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 兄弟 MIUI | IOT | MI */
+        li + li::before {
+            content: '|';
+        }
+        /* ul 直接子元素 li  ul里面嵌套li，若li中也嵌套li则不会被选中 */
+        /* ul > li {
+
+        } */
+        /* 选中第二个li及其之后的所有li */
+        ul:nth-child(2) ~ li{
+            color: red;
+        }
+        /* 
+        选择器 优先级
+        !important       1-0-0-0-0
+        行内：              1-0-0-0
+        id:                  1-0-0
+        class:               0-1-0
+        tag: div li          0-0-1
+        attr: [type="text"]  0-1-0
+        */
+        #id{
+            color: red;
+        }
+        .cls{
+            color: green;
+        }
+        /* 0-2-0 不会超出*/
+        /* .cls.cls2{
+
+        } */
+    </style>
+</head>
+<body>
+    <ul id = "id" class="cls cls2">
+        <li>MIUI
+            <li>111</li>
+        </li>
+        <li>IOT</li>
+        <li>MI</li>
+    </ul>
+</body>
+</html>
