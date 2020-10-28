@@ -12,7 +12,33 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
+        this.getCity()
+    },
 
+    getCity(succeed) {
+        // 先获取城市名称
+        // 先获取当前所在地的经纬度
+        wx.getLocation({
+            success: (res) => {
+                // console.log(res)
+                // 将经纬度转换成具体的城市
+                wx.request({
+                  url: 'https://api.map.baidu.com/reverse_geocoding/v3',
+                  data: {
+                      ak: "LxjiGsWplWSeMWxG32yXOMXUsSbd8Z7v",
+                      output: 'json',
+                      coordtype: 'wgs84', // 返回gps坐标
+                      location: `${res.latitude},${res.longitude}`
+                  },
+                  success: (res) => {
+                    //   console.log(res)
+                    // 获取豆瓣api地址做接口请求
+                    // 获取到的城市名传给豆瓣api
+                    // 拿到当前城市的热映
+                  }
+                })
+            }
+        })
     },
 
     /**

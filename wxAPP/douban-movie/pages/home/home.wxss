@@ -2,3 +2,40 @@
 .weui-search-bar {
     background-color: #42bd55;
 }
+.row {
+    margin-bottom: 30rpx;
+}
+.title-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 30rpx;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.title {
+    font-weight: bold;
+    font-size: 34rpx;
+}
+.title-right {
+    display: flex;
+    align-items: center;
+    margin-right: 30rpx;
+}
+.title-right .more {
+    font-size: 30rpx;
+    color: #42bd55;
+}
+.title-right .arrow {
+    height: 12rpx;
+    width: 12rpx;
+    border-right: 1px solid #42bd55;
+    border-top: 1px solid #42bd55;
+    transform: rotate(45deg)
+}
+.scroll-view__movie {
+    width: 402px;
+    word-spacing: nowrap; /* 不换行 */
+}
+.scroll-view__movie .item {
+    margin-left: 30rpx;
+}
