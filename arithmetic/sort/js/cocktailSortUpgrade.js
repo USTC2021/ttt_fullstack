@@ -7,6 +7,7 @@ var cocktailSort = function (arr) {
     var leftBorder = 0, rightBorder = arr.length - 1 // 设置左右边界值
     var leftSortIndex, rightSortIndex //设置左边最后一组交换位置的下标，右边最后一组交换位置的下标
     var isSorted // 标记是否进行交换
+    console.time('鸡尾酒排序耗时')
     for (var i = 0; i < arr.length / 2; i++) {
         // 从左向右依次比较并进行交换
         isSorted = true
@@ -39,11 +40,12 @@ var cocktailSort = function (arr) {
         console.log(i,arr)
         if (isSorted) break
     }
+    console.timeEnd('鸡尾酒排序耗时')
     return arr
 }
 
-var arr = [15, 9, 18, 6, 12, 23, 2, 32, 29, 17]
+var arr = [15, 9, 18, 6, 12, 23, 2, 32, 29]
 console.log(cocktailSort(arr))
 
-arr = [2, 3, 4, 5, 6, 7, 8, 1]
-console.log(cocktailSort(arr))
+// arr = [2, 3, 4, 5, 6, 7, 8, 1]
+// console.log(cocktailSort(arr))
