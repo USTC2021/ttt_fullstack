@@ -1,0 +1,188 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body,
+div,
+p,
+video,
+button {
+  padding: 0;
+  margin: 0;
+}
+.header {
+  width: 100%;
+  height: 813px;
+  background: url("../image/section1-bg.png") no-repeat;
+  background-size: 100% 100%;
+}
+.constainer {
+  width: 708px;
+  height: 360px;
+  margin: auto;
+  padding-top: 225px;
+  text-align: center;
+}
+.constainer .title {
+  height: 138px;
+  font-family: Exo-Thin;
+  font-size: 60px;
+  font-weight: 40;
+  font-stretch: normal;
+  line-height: 75px;
+  letter-spacing: 2px;
+  color: #282828;
+}
+.constainer .video {
+  width: 59px;
+  height: 59px;
+  background: url("../image/video-icon.png");
+  background-size: contain;
+  border-radius: 50%;
+  margin: auto;
+  text-align: center;
+  margin-top: 43px;
+}
+.constainer .btn {
+  margin-top: 39px;
+  border: none;
+  width: 190px;
+  height: 50px;
+  border-radius: 3px;
+  background-color: #ff6d6d;
+  font-family: Exo-Regular;
+  font-size: 16px;
+  color: #fff;
+  letter-spacing: 3px;
+}
+.tip {
+  margin-top: 19px;
+  height: 11px;
+  font-family: Exo-Regular;
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: #282828;
+  opacity: 0.6;
+}
+.description {
+  width: 100%;
+  height: 724px;
+  display: flex;
+}
+.description .desc {
+  flex: 872;
+}
+.description .desc .desc-content {
+  width: 571px;
+  height: 367px;
+  margin: auto;
+  margin-top: 191px;
+}
+.desc-content .desc-tip {
+  font-size: 16px;
+  line-height: 50px;
+  letter-spacing: 3px;
+  color: #ff6d6d;
+}
+.desc-content .desc-title {
+  height: 93px;
+  font-family: Exo-Medium;
+  font-size: 36px;
+  line-height: 40px;
+  letter-spacing: 2px;
+  color: #282828;
+}
+.desc-content .desc-title span {
+  color: #ff6d6d;
+}
+.desc-content .content {
+  margin-top: 45px;
+  height: 200px;
+  font-family: Exo-Medium;
+  font-size: 14px;
+  line-height: 26px;
+  letter-spacing: 1px;
+  color: #282828;
+  opacity: 0.66;
+}
+.desc-content .content .second {
+  margin-top: 38px;
+}
+.description .rectangle {
+  width: 568px;
+  background-color: #ededed;
+}
+.description .triangle {
+  margin-top: 156px;
+  width: 0;
+  height: 0;
+  border-bottom: 568px solid #fb8686;
+  border-left: 568px solid transparent;
+}
+.features {
+  width: 100%;
+  height: 675px;
+  background: url("../image/pen-holder.png") no-repeat;
+  background-size: contain;
+}
+.features .features-desc {
+  margin: auto;
+  height: 353px;
+  width: 1120px;
+}
+.features-desc .features-head {
+  width: 100%;
+  display: flex;
+}
+.features-desc .features-head .title {
+  width: 954px;
+  height: 210px;
+  text-align: center;
+}
+.features-head .title .title-tip {
+  margin-top: 138px;
+  font-family: Exo-Medium;
+  font-size: 16px;
+  line-height: 50px;
+  letter-spacing: 3px;
+  color: #ff6d6d;
+}
+.features-head .title .title-name {
+  margin-top: 5px;
+  font-family: Exo-Medium;
+  font-size: 40px;
+  line-height: 50px;
+  letter-spacing: 2px;
+  color: #282828;
+}
+.features-desc .features-content {
+  margin-top: 30px;
+  height: 202px;
+  display: flex;
+}
+.features-content .features-contentBox {
+  flex: 1;
+  text-align: center;
+}
+.features-contentBox .pic img {
+  width: 65px;
+  height: 65px;
+}
+.features-contentBox .title {
+  margin-top: 15px;
+  font-family: Exo-Medium;
+  font-size: 22px;
+  letter-spacing: 1px;
+  color: #282828;
+  line-height: 50px;
+}
+.features-contentBox .content {
+  width: 342px;
+  height: 70px;
+  font-family: Exo-Medium;
+  font-size: 14px;
+  line-height: 26px;
+  letter-spacing: 1px;
+  color: #282828;
+  opacity: 0.66;
+}
