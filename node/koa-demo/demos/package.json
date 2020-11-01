@@ -1,8 +1,8 @@
 {
-  "name": "koa-demo",
+  "name": "demos",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "demo01.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,7 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "koa": "^2.13.0",
     "koa-router": "^9.4.0"
   }
 }

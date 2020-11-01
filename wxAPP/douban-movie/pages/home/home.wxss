@@ -10,7 +10,7 @@
     justify-content: space-between;
     margin-left: 30rpx;
     align-items: center;
-    margin-bottom: 30px;
+    margin-bottom: 30rpx;
 }
 .title {
     font-weight: bold;
@@ -30,11 +30,12 @@
     width: 12rpx;
     border-right: 1px solid #42bd55;
     border-top: 1px solid #42bd55;
-    transform: rotate(45deg)
+    transform: rotateZ(45deg)
 }
 .scroll-view__movie {
-    width: 402px;
+    height: 402rpx;
     word-spacing: nowrap; /* 不换行 */
+    /* border: 1px solid #000; */
 }
 .scroll-view__movie .item {
     margin-left: 30rpx;
