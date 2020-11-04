@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script>
+        Person.prototype.name = '蜗牛'
+        // new构造函数的三部曲
+        // 在构造函数里创建一个this空对象
+        // 把this空对象里的对象原型__proto__修改成构造函数的原型
+        // 抛出对象return this
+        function Person () {
+            // var this = {
+            //     __proto__: Person.prototype
+            // }
+            // return this
+        }
+        var person = new Person() // 拿到抛出的对象
+        console.log(person)
+
+        var obj = { // Object
+            name: '蜗牛'
+        }
+        console.log(obj.__proto__)
+        person.__proto__ = obj
+        console.log(person.__proto__)
+        console.log(person.name)
+        // 一个对象的隐式原型__proto__指向谁，就上谁那里找属性
+
+        var test = {}
+    </script> -->
+
+    <script>
+        // 深浅拷贝
+
+        // 深拷贝
+        var a = 1
+        var b = a
+        a = 2
+        // 为什么此时b还是1呢？
+        // 赋值操作只是将地址指针指向其
+
+        Person.prototype.name = '蜗牛'
+        function Person() {
+
+        }
+        var person = new Person()
+
+        // 浅拷贝 受原始对象的影响称浅拷贝
+        // 修改原型上的属性
+        // Person.prototype.name = '大白'
+        // console.log(person.name) // 大白
+
+        // 深拷贝
+        // 重写原型
+        Person.prototype = {
+            name: '大白'
+        }
+        console.log(person.name) // 蜗牛
+    </script>
+</body>
+</html>
