@@ -8,7 +8,8 @@ var findNthDigit = function(n) {
     if (n >= 0 || n <= 9) {
         return n
     } else {
-        
+        var base = 1 // 位数
+        var num = 9
     }
 }
 
