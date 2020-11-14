@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a = 'a'
+        var c = 'c'
+        function foo() {
+            // 欺骗词法作用域
+            eval('var a = "123"')
+            console.log(a)
+        }
+        function bar() {
+            var a = 'a1'
+            foo()
+            function baz() {
+                console.log(c)
+            }
+        }
+        baz()
+        bar()
+        // 编译原理：词法分析 -> 语法分析 -> xxx
+    </script>
+</body>
+</html>
