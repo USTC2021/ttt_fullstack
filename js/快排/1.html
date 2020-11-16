@@ -1,0 +1,80 @@
+<script>
+    // function partition(arr) {
+    //     let privt = arr[0] 
+    //     let i = 0, j = arr.length - 1
+    //     while (i < j) {
+    //         // 在右边找到 < privt
+    //         while (arr[j] >= privt) {
+    //             j--
+    //         }
+    //         arr[i] = arr[j]
+    //         // 在左边找到 > privt
+    //         while (arr[i] <= privt) {
+    //             i++
+    //         }
+    //         arr[j] = arr[i]
+    //     }
+    //     arr[i] = privt
+    // }
+
+    // function partition(arr, left, right) {
+    //     if (left >= right) return
+    //     let privt = arr[left] 
+    //     let i = left, j = right
+    //     while (i < j) {
+    //         // 在右边找到 < privt
+    //         while (arr[j] >= privt && i < j) {
+    //             j--
+    //         }
+    //         arr[i] = arr[j]
+    //         // 在左边找到 > privt
+    //         while (arr[i] <= privt && i < j) {
+    //             i++
+    //         }
+    //         arr[j] = arr[i]
+    //     }
+    //     arr[i] = privt
+    //     // i === j 基准值位置
+    //     partition(arr, left, i - 1)
+    //     partition(arr, i + 1, right)
+    // }
+    // function sort(arr) {
+    //     partition(arr, 0, arr.length - 1)
+    //     return arr 
+    // }
+    // console.log(sort([-1, -2, -4, 6, 9, -9]))
+
+    function cb(a, b) {
+        return b - a
+    }
+    function partition(arr, left, right) {
+        if (left >= right) return
+        let privt = arr[left] 
+        let i = left, j = right
+        while (i < j) {
+            // 在右边找到 < privt
+            // cb(arr[j], privt) <= 0
+            // arr[j] <= 0
+            while (cb(arr[j], privt) <= 0 && i < j) {
+                j--
+            }
+            arr[i] = arr[j]
+            // 在左边找到 > privt
+            // cb(arr[i], privt) >= 0
+            // arr[i] >= 0
+            while (cb(arr[j], privt) >= 0 && i < j) {
+                i++
+            }
+            arr[j] = arr[i]
+        }
+        arr[i] = privt
+        // i === j 基准值位置
+        partition(arr, left, i - 1)
+        partition(arr, i + 1, right)
+    }
+    function sort(arr) {
+        partition(arr, 0, arr.length - 1)
+        return arr 
+    }
+    console.log(sort([-1, -2, -4, 6, 9, -9]))
+</script>
