@@ -1,9 +1,10 @@
 [剑指 Offer 66. 构建乘积数组](https://leetcode-cn.com/problems/gou-jian-cheng-ji-shu-zu-lcof/)
 
 - 读题
-    number R, C, r0, c0
-    按距(r0, c0)的距离从最小到最大排序
-    return number[][]
+    number[] a a[0, 1, 2, ..., n - 1]
+    B[0, 1, 2, ..., n - 1]
+    B[i] = a[0] * ... a[i] * a[i + 1] ... * a[n - 1]
+    return number[]
 
 - 解题
     1. 方法一：暴力法
