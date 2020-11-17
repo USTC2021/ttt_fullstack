@@ -1,5 +1,5 @@
 /**
- * LeetCode26. 删除排序数组中的重复项
+ * LeetCode215. 数组中的第K个最大元素
  * @param {number[]} nums
  * @param {number} k
  * @return {number}
