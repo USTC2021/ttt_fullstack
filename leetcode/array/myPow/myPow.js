@@ -33,5 +33,6 @@ console.log(myPow(x, n)) // 9.26100
 var x = 2.00000, n = -2
 console.log(myPow(x, n)) // 0.25000
 
+// 超时
 var x = 2.00000, n = -2147483648
 console.log(myPow(x, n)) 
