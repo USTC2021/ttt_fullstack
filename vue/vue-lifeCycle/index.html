@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.9/vue.common.dev.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <!-- 模块 -->
+   <div id="app">
+       {{msg}}
+       <button @click="changeData">click</button>
+   </div>
+   
+   <script>
+       let app = new Vue({
+            el: '#app',
+            data () {
+                return {
+                   msg: 'hello vue'
+                }
+            }, 
+
+            methods: {
+                changeData() {
+                    this.msg = '哈哈哈'
+                }
+            },
+            
+            // 接口请求耗时很慢的话放在下面四个哪个生命周期过程都可以，耗时很快的话就放在mounted
+            beforeCreate() {
+               console.log('beforeCreate') // 生命周期被初始化后执行beforeCreate
+            },
+            created() {
+                console.log('created') // 有了数据源之后出现才执行created，页面还不能看到东西，页面要看到东西要等到编译完成后才能显示出来
+            }, // 判断有无挂载，编译模板
+            beforeMount() {
+                console.log('beforeMount') // 编译模板解析完成后执行beforeMount
+            }, // 创建一个真实的dom结构，把虚拟dom结构转换成真实的dom结构
+            mounted() {
+                console.log('mounted')
+            },
+
+            // 有数据发生变化时候才会执行下面两个生命周期
+            beforeUpdate() {
+                console.log('beforeUpdate')
+            },
+            updated() {
+                console.log('updated')
+            },
+
+            // 页面销毁的时候才会执行
+            beforeDestroy() {
+                console.log('beforeDestroy')
+            },
+            destroyed() {
+                console.log('destroyed') // 页面跳转销毁的时候消除setTimeout
+            }
+       })
+   </script>
+</body>
+</html>
