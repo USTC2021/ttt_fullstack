@@ -5,7 +5,9 @@
       <router-link to="/about">关于</router-link>
     </p>
     <!-- 路由路口 -->
-    <router-view></router-view>  
+    <transition name="fade">
+      <router-view></router-view>  
+    </transition>
   </div>
 </template>
 
@@ -27,5 +29,18 @@ export default {
   }
   p {
     text-align: center;
+  }
+  .fade-enter {
+    opacity: 0;
+  }
+  .face-leave {
+    opacity: 1;
+  }
+  .fade-enter-active {
+    transition: opacity 1s;
+  }
+  .face-leave-active {
+    opacity: 0;
+    /* transition: opacity 0.5s; */
   }
 </style>
