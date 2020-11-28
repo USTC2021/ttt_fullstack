@@ -34,6 +34,7 @@ export default {
                         user: this.userName
                     }
                 })
+                localStorage.setItem('user', this.userName)
             }
         }
     }
