@@ -34,15 +34,18 @@
   }
   maxDepth(root)
 
-  function maxDepth1() {
+  function maxDepth1(root) {
     let res = 0
     var maxDepth1 = function(root, dep) {
-      if (!root) return 0;
-      res = Math.max(dep, res)
+      if (!root) {
+        res = Math.max(dep, res)
+        return;
+      }
       let lh = maxDepth1(root.left, dep + 1)
       let rh = maxDepth1(root.right, dep + 1)
     }
     maxDepth1(root, 0)
-    return res + 1
+    return res
   }
+  maxDepth1(root)
 </script>
