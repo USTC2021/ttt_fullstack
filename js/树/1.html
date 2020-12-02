@@ -1,0 +1,53 @@
+<script>
+  let root = {
+    val: 1,
+    left: {
+      val: 2,
+      left: {
+        val: 3
+      },
+      right: {
+        val: 4
+      }
+    },
+    right: {
+      val: 3,
+      left: {
+        val: 5
+      },
+      right: {
+        val: 6
+      }
+    }
+  }
+
+  // 核心
+  // root left right
+  // 深度优先：前序 中序 后序 DFS
+  // 广度优先：层序 BDF
+  function walk (root) {
+    let arr = [];
+    function preOrder(root) {
+      if (!root) 
+        return root;
+      // console.log(root.val)
+      arr.push(root)
+      preOrder(root.left)
+      preOrder(root.right)
+      
+      // left root right
+      // preOrder(root.left)
+      // console.log(root.val)
+      // preOrder(root.right)
+
+      // right root left
+      // preOrder(root.right)
+      // console.log(root.val)
+      // preOrder(root.left)
+    }
+    preOrder(root)
+    return arr
+  }
+  // let root = [1, null, 2, 3]
+  console.log(walk(root))
+</script>
