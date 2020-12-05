@@ -34,7 +34,7 @@
                   </div>
                   <!-- + -->
                   <div class="cartcontrol-wrapper">
-                    <CartControl :food="food"></CartControl>
+                    <CartControl :food="food" :class="{selectFoods}"></CartControl>
                   </div>
                 </div>
               </li>
@@ -44,7 +44,7 @@
       </div>
     </div>
     <!-- 购物车 -->
-    <ShopCart></ShopCart>
+    <ShopCart :selectFoods="selectFoods" :deliveryPrice="seller.deliveryPrice" :minPrice="seller.minPrice"></ShopCart>
   </div>
 </template>
 
@@ -55,6 +55,11 @@ import SupportIco from '@/components/support-ico/Support-ico'
 import ShopCart from '@/components/shop-cart/Shop-cart'
 import CartControl from '@/components/cart-control/Cart-control'
 export default {
+  props: {
+    seller: {
+      type: Object
+    }
+  },
   data () {
     return {
       goods: [],
@@ -76,6 +81,17 @@ export default {
     },
     selectFoods () {
       let foods = []
+      this.goods.forEach((good) => {
+        if (good.foods) {
+          good.foods.forEach((food) => {
+            if (food.count) {
+              foods.push(food)
+            }
+          })
+        }
+      })
+      console.log(foods)
+      return foods
     }
   },
   created () {
