@@ -56,3 +56,14 @@ MVC
     nums:500
     创建number的索引
     db.numbers.createIndex({num:1});
+
+  - 电商应用
+    node Mongodb
+
+  - 数据怎么进入数据库的
+    - 先连接
+      mongodb url once('open')
+    - 对数据库建模
+      userSchema 字段名 + 类型
+      mongoose.model('User', userSchema)
+      new User.save()
