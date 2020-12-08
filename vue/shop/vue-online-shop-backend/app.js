@@ -6,9 +6,11 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-var apiRouter = require('./routes/api'); // 前端与后端通信调用
-var app = express();
 
+var apiRouter = require('./routes/api')
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost:27017/test');
+var app = express();
 app.all('/*', function(req, res, next) {
   // CORS headers
   res.header("Access-Control-Allow-Origin", "*"); // restrict it to the required domain
@@ -21,7 +23,6 @@ app.all('/*', function(req, res, next) {
     next();
   }
 });
-
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');

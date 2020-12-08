@@ -4,9 +4,8 @@ var router = express.Router();
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.json({
-    mes: 'hello world'
+    mes:'hello world'
   })
-  // res.render('index', { title: 'Express' });
 });
 
 module.exports = router;

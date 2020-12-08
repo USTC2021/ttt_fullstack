@@ -1,5 +1,7 @@
 <template>
-  <div>home</div>
+  <div>
+    独山村暖冬
+  </div>
 </template>
 
 <script>

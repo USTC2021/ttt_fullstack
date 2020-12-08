@@ -1,28 +1,35 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
+    <nav>
+      <ul>
+        <li>
+          <router-link to="/">Home</router-link>
+        </li>
+        <li>
+          <router-link to="/admin">Admin</router-link>
+        </li>
+        <li>
+          <router-link to="/cart">Cart</router-link>
+        </li>
+      </ul>
+    </nav>
+    <router-view/>
     <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
-
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  },
-  mounted() {
-    // fetch('http://localhost:3000/api/v1').then(data => {
-    //   console.log(data)
-    // }).catch(err => {
-    //   console.log(err)
-    // })
-    fetch('http://localhost:3000/api/v1').then(data => data.json()).then(data =>{
-      console.log(data)
-    }).catch(err => {
-      console.log(err)
+  mounted () {
+    fetch('http://127.0.0.1:3000/api/v1')
+    .then(data =>data.json())
+    .then(data =>{
+      console.log(data);
+    })
+    .catch(err=>{
+      console.log(err);
     })
   }
 }
@@ -30,7 +37,7 @@ export default {
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;

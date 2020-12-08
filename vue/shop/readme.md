@@ -29,3 +29,12 @@ http://localhost:8000-> :3000 跨域  (考题)
   4. 前端请求
   5. 跨域不只是域名不同，端口和协议不一样也算跨域
   6. App.all 后端配置解决的
+
+- 基于 mongodb 数据流 -> MVC node (express)
+  -> vue 界面
+  1. model 层的构建
+    这是一个精简版的model层  model目录有了
+    index.js 所有的模型定义在这里
+    mongoose.Schema 根据数据库结构定义生成类
+  2. postman 测试一下数据
+    - 路由
