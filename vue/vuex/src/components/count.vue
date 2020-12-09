@@ -33,7 +33,7 @@ export default {
   //   newCount: state => state.count * 3
   // })
   // computed: mapState(['count']),
-  // 组件传值：eventbars、vuex
+  // 组件传值：eventbus、vuex
   computed: {
     ...mapState(['count']),
     ...mapGetters(['newCount'])
