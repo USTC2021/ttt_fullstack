@@ -49,8 +49,8 @@ function isPrimeNumber (n) {
 // let n = 13
 // console.log(primePalindrome(n)) // 101
 
-// let n = Math.pow(10, 8)
-// console.log(primePalindrome(n)) // 100030001
+let n = Math.pow(10, 8)
+console.log(primePalindrome(n)) // 100030001
 
 // let n = 1
 // console.log(primePalindrome(n)) // 2
