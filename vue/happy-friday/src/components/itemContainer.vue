@@ -17,21 +17,22 @@
         <div class="item_list_container">
           <header class="item_title">{{itemDetail[itemNum-1].topic_name}}</header>
           <ul>
-            <li class="item_list" v-for="(item, index) in itemDetail[itemNum-1].topic_answer" :key="index" @click="choosed(index, item.topic_answer_id)">
+            <li class="item_list" v-for="(item, index) in itemDetail[itemNum-1].topic_answer" :key="index" @click="choosed(index, item.is_standard_answer)">
               <span class="option_style" :class="{'has_choosed': choosedNum == index}">{{chooseType(index)}}</span>
               <span class="option_detial">{{item.answer_name}}</span>
             </li>
           </ul>
         </div>
       </div>
-      <span class="next_item button_style" @click="nextItem"></span>
+      <span class="next_item button_style" @click="nextItem" v-if="itemNum < itemDetail.length"></span>
+      <span class="submit_item button_style" @click="submitAnswer" v-else></span>
       <!-- <router-link class="start button_style" to="/item"></router-link> -->
     </div>
   </section>
 </template>
 
 <script>
-import { mapState } from 'vuex';
+import { mapState, mapActions } from 'vuex';
 export default {
   props: ['fatherComponent'],
   data () {
@@ -65,10 +66,23 @@ export default {
     nextItem () {
       if (this.choosedNum !== null) {
         // 清除choosedNum 
+        this.choosedNum = null
         // 保存答案，题目索引加一，跳到下一题 
+        this.addNum(this.choosedId)
       } else {
         alert('您还没有选择答案哦')
       }
+    },
+    // 到达最后一题交卷
+    submitAnswer () {
+      if (this.choosedNum !== null) {
+        this.addNum(this.choosedId)
+        this.$router.push('/score') // 页面跳转
+      } else {
+        alert('您还没有选择答案哦')
+      }
+    },
+    ...mapActions(['addNum'])
   },
   computed: mapState(['itemDetail', 'itemNum'])
   // computed: {
@@ -77,7 +91,7 @@ export default {
 }
 </script>
 
-<style leng="less" scoped>
+<style lang="less" scoped>
 .top-tips {
   position: absolute;
   height: 7.35rem;
