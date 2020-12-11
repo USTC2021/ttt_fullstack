@@ -14,7 +14,7 @@
 
     <van-row>
       <van-button size="small" type="default">注册</van-button>
-      <van-button size="small" type="primary" class="btn-login">登录</van-button>
+      <van-button size="small" type="primary" class="btn-login" @click="handleLogin">登录</van-button>
     </van-row>
   </div>
 </template>
@@ -26,7 +26,33 @@ export default {
       username: "",
       password: "",
     };
-  },
+  }, 
+  methods: {
+    showLoginTip () {
+      this.$toast.loading({
+        message: status,
+        forbidClick: true,
+        loadingType: 'spinner',
+        duration: 0
+      })
+    },
+    login () {
+      this.$http.login({
+        username: this.username,
+        password: this.password
+      }).then(res => {
+        console.log(res)
+      })
+    },
+    handleLogin () {
+      if (this.username.trim() == '' || this.password.trim() == '') {
+        this.$toast.fail('用户名或密码不能为空')
+        return
+      }
+      this.showLoginTip('登陆中...')
+      this.login()
+    }
+  }
 };
 </script>
 
