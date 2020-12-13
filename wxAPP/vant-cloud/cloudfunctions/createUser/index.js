@@ -34,5 +34,5 @@ exports.main = async (event, context) => {
         createTime: new Date()
       }
     })
-  }
+  } 
 }
