@@ -1,10 +1,12 @@
 const Koa = require('koa')
 const path = require('path')
-// const bodyParser = require('koa-bodyparser')
+const bodyParser = require('koa-bodyparser')
 const config = require('./config/default.js')
+// koa-session-minimal koa-mysql-session 进行数据库操作
 const session = require('koa-session-minimal')
 const MysqlStore = require('koa-mysql-session')
-// const staticCache = require('koa-static-cache')
+// 配置静态资源
+const staticCache = require('koa-static-cache')
 const views = require('koa-views')
 const app = new Koa()
 
@@ -26,13 +28,13 @@ app.use(session({
   store: new MysqlStore(sessionMysqlConfig)
 }))
 
-// // 缓存
-// app.use(staticCache(path.join(__dirname, './public'), { dynamic: true }, {
-//   maxAge: 365 * 24 * 60 * 60
-// }))
-// app.use(staticCache(path.join(__dirname, './images'), { dynamic: true }, {
-//   maxAge: 365 * 24 * 60 * 60
-// }))
+// 缓存
+app.use(staticCache(path.join(__dirname, './public'), { dynamic: true }, {
+  maxAge: 365 * 24 * 60 * 60
+}))
+app.use(staticCache(path.join(__dirname, './images'), { dynamic: true }, {
+  maxAge: 365 * 24 * 60 * 60
+}))
 
 
 // 配置服务端的模版引擎中间件
@@ -40,13 +42,15 @@ app.use(views(path.join(__dirname, './views'), {
   extension: 'ejs'
 }))
 
-// app.use(bodyParser({
-//   formLimit: '1mb'
-// }))
+app.use(bodyParser({
+  formLimit: '1mb'
+}))
 
 app.use(require('./routers/signin.js').routes())
-// app.use(require('./routers/signup.js').routes())
+app.use(require('./routers/signup.js').routes())
 
 app.listen(config.port, () => {
   console.log('3000端口已启动');
 })
+
+
