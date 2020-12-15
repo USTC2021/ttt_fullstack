@@ -1,5 +1,5 @@
 {
-  "name": "notebook-client",
+  "name": "nootbook-client",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -23,5 +23,10 @@
     "less": "^3.0.4",
     "less-loader": "^5.0.0",
     "vue-template-compiler": "^2.6.11"
-  }
+  },
+  "description": "## Project setup ``` npm install ```",
+  "main": "babel.config.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }

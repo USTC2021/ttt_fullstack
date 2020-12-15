@@ -5,14 +5,22 @@ import StarLogin from '@/views/login/StarLogin'
 Vue.use(VueRouter)
 
 const routes = [
- {
-   path: '/starLogin',
-   name: 'starLogin',
-   component: StarLogin,
-   meta: {
-     title: '登录'
-   }
- }
+  {
+    path: '/starLogin',
+    name: 'starLogin',
+    component: StarLogin,
+    meta: {
+      title: '登录'
+    }
+  },
+  {
+    path: '/starRegister',
+    name: 'starRegister',
+    component: () => import('@/views/register/index'),
+    meta: {
+      title: '注册'
+    }
+  }
 ]
 
 const router = new VueRouter({

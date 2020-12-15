@@ -1,4 +1,4 @@
-# notebook-client
+# nootbook-client
 
 ## Project setup
 ```
