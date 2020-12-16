@@ -11,6 +11,50 @@ router.prefix('/users')
 // })
 
 // 注册
+router.post('/userRegister', async(ctx) => {
+  let _username = ctx.request.body.username;
+  let _userpwd = ctx.request.body.userpwd;
+  let _nickname = ctx.request.body.nickname;
+  console.log(_username, _userpwd, _nickname);
+  if (!_username || !_userpwd || !_nickname) {
+    ctx.body = {
+      code: '80001',
+      mess: '用户名密码和昵称不能为空'
+    }
+    return
+  }
+  // 先拿到数据库中查询，判断是否存在，不存在，再插入
+  await userServer.findUser(_username).then(async (res) => {
+    console.log(res)
+    if (res.length) {
+      ctx.body = {
+        code: '80003',
+        data: '',
+        mess: '用户名已存在'
+      }
+    } else {
+      await userServer.insertUser([_username, _userpwd, _nickname]).then(res => {
+        console.log(res)
+        let r = ''
+        if (res.affectedRows != 0) {
+          r = 'ok'
+          ctx.body = {
+            code: '80000',
+            data: r,
+            mess: '注册成功'
+          }
+        } else {
+          r = 'error'
+          ctx.body = {
+            code: '80004',
+            data: r,
+            mess: '注册失败'
+          }
+        }
+      })
+    }
+  })
+})
 
 // 登录
 router.post('/userLogin', async (ctx, next) => {
@@ -46,6 +90,15 @@ router.post('/userLogin', async (ctx, next) => {
       code: '80002',
       data: err
     }
+  })
+})
+
+// 查找文章内容
+router.post('/findNoteListByType', async (ctx) => {
+  let note_type = ctx.request.body.note_type;
+  console.log('ctx', ctx)
+  await userServer.findNoteListByType(note_type).then(res => {
+    console.log(res)
   })
 })
 
