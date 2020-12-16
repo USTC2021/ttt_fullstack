@@ -8,9 +8,9 @@ import util from './assets/js/util'
 
 import 'vant/lib/index.css';
 
-import { Swipe, SwipeItem, Toast, Icon } from 'vant';
+import { Swipe, SwipeItem, Toast, Icon, Field, Uploader, ActionSheet, Picker } from 'vant';
 
-Vue.use(Swipe).use(SwipeItem).use(Toast).use(axios).use(Icon);
+Vue.use(Swipe).use(SwipeItem).use(Toast).use(axios).use(Icon).use(Field).use(Uploader).use(ActionSheet).use(Picker);
 
 
 Vue.config.productionTip = false

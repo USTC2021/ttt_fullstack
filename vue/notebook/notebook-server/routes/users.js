@@ -94,12 +94,54 @@ router.post('/userLogin', async (ctx, next) => {
 })
 
 // 查找文章内容
-router.post('/findNoteListByType', async (ctx) => {
-  let note_type = ctx.request.body.note_type;
-  console.log('ctx', ctx)
-  await userServer.findNoteListByType(note_type).then(res => {
-    console.log(res)
+router.post('/findNoteListByType', async (ctx, next) => {
+  let _notetype = ctx.request.body.note_type;
+  await userServer.findNoteListByType(_notetype).then(res => {
+    // console.log(res)
+    let r = '';
+    if (res.length) {
+      r = 'ok';
+      let result = res
+      ctx.body = {
+        code: '80000',
+        data: result,
+        mess: '查询成功'
+      }
+    } else {
+      r = 'error'
+      ctx.body = {
+        code: '80004',
+        data: r,
+        mess: '查询失败'
+      }
+    }
   })
 })
+
+// 查找文章详情
+router.post('/findNoteDetailById', async (ctx, next) => {
+  let _id = ctx.request.body.note_id;
+  await userServer.findNoteDetailById(_id).then(res => {
+    // console.log(res)
+    let r = '';
+    if (res.length) {
+      r = 'ok';
+      ctx.body = {
+        code: '80000',
+        data: res[0],
+        mess: '查询成功'
+      }
+    } else {
+      r = 'error'
+      ctx.body = {
+        code: '80004',
+        data: r,
+        mess: '查询失败'
+      }
+    }
+  })
+})
+
+// 发布文章
 
 module.exports = router
