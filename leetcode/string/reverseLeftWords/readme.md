@@ -7,4 +7,4 @@
   return string
    
 - 解题
-  1. 方法一
+  1. 方法一: 库函数 slice
