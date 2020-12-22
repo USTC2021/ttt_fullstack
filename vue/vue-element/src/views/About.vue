@@ -17,11 +17,14 @@
         <router-link to="/hello">王五</router-link>
       </li> -->
     </ul>
+    <verify-code></verify-code>
   </div>
 </template>
 
 <script>
+import verifyCode from '../../../verify-code/src/verify-code.vue'
 export default {
+  components: { verifyCode },
 
 }
 </script>
