@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <div id="wrapper">
+      <button id="btn">click</button>
+    </div>
+  </div>
+
+  <script>
+    let wrapper = document.getElementById('wrapper')
+    let btn = document.getElementById('btn')
+
+    // 不开启捕获
+    // wrapper.addEventListener('click', function() {
+    //   console.log('wrapper')
+    // })
+
+    // btn.addEventListener('click', function() {
+    //   console.log('btn')
+    // })
+
+    // true 开启捕获
+    // wrapper.addEventListener('click', function() {
+    //   console.log('wrapper')
+    // }, true)
+
+    // btn.addEventListener('click', function() {
+    //   console.log('btn')
+    // }, false)
+
+    wrapper.addEventListener('click', function() {
+      console.log('wrapper')
+    })
+
+    btn.addEventListener('click', function(event) {
+      console.log('btn')
+      // event.stopPropagation() // 阻止默认事件进一步传播，默认事件包括捕获和冒泡，可以阻止捕获
+      event.stopImmediatePropagation() // 阻止默认事件的进一步传播，还能够阻止该目标执行别的同类事件
+    })
+    btn.addEventListener('click', function(event) {
+      console.log('btn2')
+    })
+  </script>
+</body>
+</html>
