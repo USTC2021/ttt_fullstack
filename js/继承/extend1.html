@@ -1,0 +1,39 @@
+<script>
+  // 构造函数继承
+  // 避免引用类型的属性被实例共享的问题，而且可以进行传参
+  // 无法实现函数复用
+  // 继承不到原型链上的属性
+  // function Parent() {
+  //   this.names = ['大白', '柯南']
+  // }
+
+  // function Child(name) {
+  //   Parent.call(this)
+  // }
+
+  // let child = new Child()
+  // child.names.push('多来爱梦')
+  // console.log(child)
+  // let child1 = new Child()
+  // console.log(child1)
+
+  function Parent(name) {
+    this.names = ['大白', '柯南']
+    this.name = name
+  }
+
+  function Child(name) {
+    Parent.call(this, name)
+  }
+
+  // 避免了引用类型的属性被所有实例共享
+  let child = new Child('aaaa')
+  child.names.push('多来爱梦')
+  console.log(child)
+  let child1 = new Child('bbbb')
+  console.log(child1)
+
+  // 原型链继承和构造函数的继承的区别
+  // 借助原型链的效果可以实现继承，但是碰到引用类型被实例所共享的时候就会出现问题
+  // 而构造函数继承的话就会避免引用类型的属性被实例共享的问题
+</script>

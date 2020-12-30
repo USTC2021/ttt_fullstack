@@ -1,0 +1,24 @@
+<script>
+  // 组合继承
+  function Parent(name) {
+   this.name = name
+   this.colors = ['red', 'green', 'blue']
+  }
+
+  Child.prototype = new Parent()
+  function Child(name, age) {
+    Parent.call(this, name)
+    this.age = age
+  }
+
+  let child = new Child('大白', '18')
+  child.colors.push('yellow')
+  console.log(child.name) // 大白
+  console.log(child.age) // 18
+  console.log(child.colors) // ['red', 'green', 'blue', 'yellow']
+
+  let child1 = new Child('柯南', '19')
+  console.log(child1.name) // 柯南
+  console.log(child1.age) // 19
+  console.log(child1.colors) // ['red', 'green', 'blue']
+</script>

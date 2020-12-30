@@ -1,0 +1,16 @@
+<script>
+  function Parent() {
+    this.names = ['大白', '柯南']
+  }
+
+  function Child() {
+
+  }
+
+  Child.prototype = new Parent() // { name: ['大白', '柯南'] }
+  let child = new Child()
+  child.names.push('多来爱梦')
+  console.log(child)
+  let child1 = new Child()
+  console.log(child1)
+</script>
