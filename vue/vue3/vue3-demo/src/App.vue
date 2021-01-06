@@ -8,14 +8,28 @@
     <Fargment :data="[5, 3, 4, 1, 8, 9, 2]" />
   </ul>  -->
 
-  <TeleportDemo />
+  <!-- <TeleportDemo /> -->
+
+  <!-- <Suspense>
+    <template #default>
+      <AsyncComponent :timeout="3000" />
+    </template>
+    <template #fallback>
+      <Loading></Loading>
+    </template>
+  </Suspense> -->
+
+  <TodoList></TodoList>
 </template>
 
 <script>
 // composition api
 import { reactive, computed, ref, onMounted } from 'vue' 
 // import Fargment from '@/components/Fargment'
-import TeleportDemo from '@/components/Teleport'
+// import TeleportDemo from '@/components/Teleport'
+// import AsyncComponent from '@/components/AsyncComponent'
+// import Loading from '@/components/Loading'
+import TodoList from '@/components/TodoList'
 export default {
   setup() { // 入口
     // const state = reactive({
@@ -40,7 +54,10 @@ export default {
   },
   components: {
     // Fargment,
-    TeleportDemo
+    // TeleportDemo,
+    // AsyncComponent,
+    // Loading,
+    TodoList
   }
 }
 
