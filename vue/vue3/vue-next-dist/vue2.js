@@ -110,6 +110,8 @@ observer(data)
 // console.log(data.like.a.hb);
 
 data.job.push('teacher')
+// 直接修改数组的length属性是不会触发视图更新的
+// data.job.length = 4
 console.log(data.job);
 
 // vue2中响应式的原理如何实现
