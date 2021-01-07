@@ -112,6 +112,8 @@ observer(data)
 data.job.push('teacher')
 // 直接修改数组的length属性是不会触发视图更新的
 // data.job.length = 4
+// 对象不存在的属性是不能被拦截的
+// data.height = 165
 console.log(data.job);
 
 // vue2中响应式的原理如何实现
