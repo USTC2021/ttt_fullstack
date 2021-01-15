@@ -10,10 +10,12 @@ export function getCart(params) {
   return axios.get('/shop-cart', {params})
 }
 
+// 修改购物车
 export function modifyCart(params) {
   return axios.put('/shop-cart', params)
 }
 
+// 购物车删除商品
 export function deleteCartItem(id) {
   return axios.delete(`/shop-cart/${id}`)
 }

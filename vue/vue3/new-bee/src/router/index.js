@@ -25,7 +25,7 @@ const routes = [
     component: () => import('@/views/ProductDetail.vue')
   },
   {
-    path: '/cart',
+    path: '/cart', // 购物车页面
     name: 'cart',
     component: () => import('@/views/Cart.vue')
   },

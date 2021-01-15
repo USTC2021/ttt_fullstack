@@ -1,5 +1,6 @@
 <template>
   <header class="simple-header">
+    <!-- 是否存在返回箭头 -->
     <van-icon name="arrow-left" @click="goBack" v-if="back"/>
     <i v-else>&nbsp;</i>
     <div class="simple-header-name">{{name}}</div>

@@ -49,9 +49,7 @@
       button-text="结算"
       @submit="onSubmit"
     >
-      <van-checkbox @click="allCheck" v-model:checked="checkAll"
-        >全选</van-checkbox
-      >
+      <van-checkbox @click="allCheck" v-model:checked="checkAll">全选</van-checkbox>
     </van-submit-bar>
     <div class="empty" v-else>
       <img
