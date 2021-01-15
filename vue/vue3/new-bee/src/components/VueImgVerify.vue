@@ -1,3 +1,4 @@
+<!-- 验证码校验 -->
 <template>
   <div class="img-verify">
     <canvas ref="verify" :width="width" :height="height" @click="handleDraw"></canvas>

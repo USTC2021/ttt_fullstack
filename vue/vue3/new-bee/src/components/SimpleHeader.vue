@@ -26,6 +26,7 @@ export default {
     }
   },
   setup(props)  {
+    // const name = ref(props.name)
     const router = useRouter()
     const goBack = () => {
       if (props.backUrl) {
@@ -36,6 +37,7 @@ export default {
     }
 
     return {
+      // name,
       goBack
     }
   }
