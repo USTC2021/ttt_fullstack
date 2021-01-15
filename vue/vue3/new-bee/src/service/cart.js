@@ -20,6 +20,7 @@ export function deleteCartItem(id) {
   return axios.delete(`/shop-cart/${id}`)
 }
 
+// 获取商品信息
 export function getByCartItemIds(params) {
   return axios.get('/shop-cart/settle', { params })
 }

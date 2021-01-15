@@ -81,6 +81,7 @@ export default {
     })
     const init = async () => {
       Toast.loading({ message: '加载中...', forbidClick: true });
+      // console.log(route.query)
       const { cartItemId, addressId } = route.query
       const _cartItemId = cartItemId ? JSON.parse(cartItemId) : JSON.parse(getLocal('cartItemId'))
       setLocal('cartItemId', JSON.stringify(_cartItemId))
@@ -94,6 +95,7 @@ export default {
       console.log(address);
       // 请求要购买的商品数据
       const { data: list } = await getByCartItemIds({ cartItemIds: _cartItemId.join(',')})
+      // console.log(list)
       state.cartList = list
       Toast.clear()
     }

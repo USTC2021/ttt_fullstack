@@ -1,9 +1,11 @@
 import axios from '../utils/axios'
 
+// 获取地址详情
 export function getAddressDetail(id) {
   return axios.get(`/address/${id}`)
 }
 
+// 获取默认地址
 export function getDefaultAddress() {
   return axios.get(`/address/default`)
 }

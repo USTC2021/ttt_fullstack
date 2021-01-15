@@ -30,7 +30,7 @@ const routes = [
     component: () => import('@/views/Cart.vue')
   },
   {
-    path: '/create-order',
+    path: '/create-order', // 生成订单
     name: 'create-order',
     component: () => import('@/views/CreateOrder.vue')
   },

@@ -47,7 +47,7 @@ export default {
         state.list = []
         return
       }
-      console.log(data);
+      // console.log(data);
       state.list = data.map(item => {
         return {
           id: item.addressId,
