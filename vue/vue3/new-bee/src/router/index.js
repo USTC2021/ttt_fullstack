@@ -20,7 +20,7 @@ const routes = [
     component: () => import('@/views/Login.vue')
   },
   {
-    path: '/product/:id',
+    path: '/product/:id', // 传参
     name: 'product',
     component: () => import('@/views/ProductDetail.vue')
   },

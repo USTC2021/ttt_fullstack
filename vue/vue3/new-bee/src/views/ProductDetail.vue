@@ -35,7 +35,7 @@
         ></div>
       </div>
     </div>
-    <!-- footer -->
+    <!-- footer 购物车 -->
     <van-action-bar>
       <van-action-bar-icon icon="chat-o" text="客服" dot />
       <van-action-bar-icon icon="cart-o" text="购物车" :badge="count ? count : ''" @click="goTo" />
@@ -48,7 +48,7 @@
 <script>
 import sHeader from "@/components/SimpleHeader";
 import { computed, onMounted, reactive, toRefs } from 'vue';
-import { useRoute, useRouter } from 'vue-router'
+import { useRoute, useRouter } from 'vue-router' // useRoute 使用路由
 import { useStore } from 'vuex'
 import { getDetail } from '@/service/goods.js'
 import { addCart } from '@/service/cart.js'
@@ -75,14 +75,14 @@ export default {
       const { data } = await getDetail(id)
       // console.log(data);
       state.detail = data
-      store.dispatch('updateCart')
+      store.dispatch('updateCart') // 若不刷新请求该次数据，购物车角标会被清0，vuex导致的问题
     })
 
     // 加入购物车
     const handleAddCart = async () => {
       const { resultCode } = await addCart({ goodsCount: 1, goodsId: state.detail.goodsId})
       if (resultCode == 200) Toast.success('添加成功')
-      store.dispatch('updateCart')
+      store.dispatch('updateCart') // 更新角标
     }
 
     // 角标
@@ -94,7 +94,7 @@ export default {
     const goToCart = async () => {
       await addCart({ goodsCount: 1, goodsId: state.detail.goodsId})
       store.dispatch('updateCart')
-      router.push({ path: '/cart' })
+      router.push({ path: '/cart' }) // 页面跳转
     }
 
     // 去到购物车页面

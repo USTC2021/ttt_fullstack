@@ -36,6 +36,7 @@ export default {
       goods: props.goods
     })
 
+    // 页面跳转到商品详情页
     const goToDetail = (item) => {
       router.push({ path: `/product/${item.goodsId}` })
     }
