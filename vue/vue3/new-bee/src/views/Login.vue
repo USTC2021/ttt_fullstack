@@ -107,7 +107,7 @@ export default {
       state.type = v
       state.verify = ''
     }
-    // 登录注册
+    // 登录注册验证码验证
     const onSubmit = async(values) => {
       console.log(verifyRef.value.imgCode); // 通过ref.value可以取到组件内setup函数返回的值
       state.imgCode = verifyRef.value.imgCode || ''

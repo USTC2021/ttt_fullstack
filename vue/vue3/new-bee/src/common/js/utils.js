@@ -1,7 +1,9 @@
+// 存本地用户名和密码
 export const setLocal = (name, value) => {
   localStorage.setItem(name, value)
 }
 
+// 取本地用户名和密码
 export const getLocal = (name) => {
   return localStorage.getItem(name)
 }

@@ -1,3 +1,4 @@
+// 封装注册登录
 import axios from '../utils/axios'
 
 export function register(params) {
