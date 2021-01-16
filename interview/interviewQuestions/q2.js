@@ -1,0 +1,1 @@
+// q2：[typeof null, null instanceof Object] // 显示结果？

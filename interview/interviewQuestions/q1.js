@@ -1,6 +1,6 @@
 // parseInt  map
 
-['1', '2', '3'].map(parseInt) // 输出结果？
+// q1：['1', '2', '3'].map(parseInt) // 输出结果？
 
 console.log(['1', '2', '3'].map(parseInt)) // [ 1, NaN, NaN ]
 // parseInt(string, radix) 解析一个字符串并返回指定基数的十进制整数
