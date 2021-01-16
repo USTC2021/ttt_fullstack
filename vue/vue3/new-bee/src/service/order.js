@@ -9,6 +9,7 @@ export function payOrder(params) {
   return axios.get('/paySuccess', {params})
 }
 
+// 获取订单列表
 export function getOrderList(params) {
   return axios.get('/order', { params })
 }

@@ -50,7 +50,7 @@ const routes = [
     component: () => import('@/views/User.vue')
   },
   {
-    path: '/order',
+    path: '/order', // 订单
     name: 'order',
     component: () => import('@/views/Order.vue')
   }

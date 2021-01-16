@@ -1,7 +1,5 @@
 <template>
-  <div class="categray">
-    <!-- 留给大家发挥 -->
-  </div>
+  <div class="categray"></div>
 </template>
 
 <script>

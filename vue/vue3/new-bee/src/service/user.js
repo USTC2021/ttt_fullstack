@@ -9,6 +9,7 @@ export function login(params) {
   return axios.post('/user/login', params)
 }
 
+// 获取用户信息
 export function getUserInfo() {
   return axios.get('/user/info')
 }

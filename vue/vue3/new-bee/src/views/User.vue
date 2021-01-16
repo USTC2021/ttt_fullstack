@@ -59,6 +59,7 @@ export default {
       state.user = data
     })
 
+    // 页面跳转
     const goTo = (path, query) => {
       router.push({ path: path, query: query || {}})
     }

@@ -89,6 +89,7 @@ export default {
       console.log(state.list);
     }
 
+    // 下拉刷新
     const onRefresh = () => {
       state.refreshing = true
       state.finished = false

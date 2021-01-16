@@ -29,9 +29,10 @@ export default {
   setup(props)  {
     // const name = ref(props.name)
     const router = useRouter()
+    // 返回
     const goBack = () => {
       if (props.backUrl) {
-        router.push({ path: props.backUrl })
+        router.push({ path: props.backUrl }) // 指定返回的页面
       } else {
         router.go(-1)
       }
