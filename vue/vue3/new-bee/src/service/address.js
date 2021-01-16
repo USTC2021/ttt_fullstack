@@ -24,6 +24,7 @@ export function EditAddress(params) {
   return axios.put('/address', params)
 }
 
+// 删除地址
 export function DeleteAddress(id) {
   return axios.delete(`/address/${id}`)
 }

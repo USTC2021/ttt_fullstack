@@ -71,6 +71,15 @@ export default {
         console.log(addressDetail);
         let _areaCode = ''
 
+        // const provice = tdist.getLev1()
+        // Object.entries(state.areaList.county_list).forEach(([id, text]) => {
+        //   // 先找到对应的区
+        //   if (text === addressDetail.regionName) {
+        //     // 找到区对应的省份
+        //     const proviceIndex = provice.findIndex(item => item.id.substr(0, 2))
+        //   }
+        // })
+
         const toCode = (area, code) => {
            for (let key in tdist) if (tdist[key][0] == area && tdist[key][1] == code) return key
         }
@@ -78,8 +87,10 @@ export default {
         let provinceCode = toCode(addressDetail.provinceName, '1') // 1
         let cityCode = toCode(addressDetail.cityName, provinceCode) // 110000
         let regionCode = toCode(addressDetail.regionName, cityCode)  // 231283  // 110104
+        // console.log(provinceCode, cityCode, regionCode)
         _areaCode = regionCode
 
+        // 组件的回显 修改地址
         state.addressInfo = {
           id: addressDetail.addressId,
           name: addressDetail.userName,
@@ -105,6 +116,7 @@ export default {
         detailAddress: content.addressDetail,
         defaultFlag: content.isDefault ? 1 : 0
       }
+      // 保存更新的地址
       if (state.type == 'edit') {
         params['addressId'] = state.addressId
       }
