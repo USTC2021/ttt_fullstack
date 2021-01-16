@@ -8,6 +8,7 @@ export const getLocal = (name) => {
   return localStorage.getItem(name)
 }
 
+// 我国行政划分
 export const tdist = {
   210184: ["沈北新区", "210100"],
   210185: ["其它区", "210100"],

@@ -1,5 +1,6 @@
 import axios from '../utils/axios'
 
+// 创建订单
 export function createOrder(params) {
   return axios.post('/saveOrder', params)
 }

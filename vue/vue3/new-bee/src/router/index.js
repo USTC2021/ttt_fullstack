@@ -40,7 +40,7 @@ const routes = [
     component: () => import('@/views/Address.vue')
   },
   {
-    path: '/address-edit',
+    path: '/address-edit', // 修改新增地址
     name: 'address-edit',
     component: () => import('@/views/AddressEdit.vue')
   },

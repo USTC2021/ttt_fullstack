@@ -36,6 +36,7 @@
       <van-button @click="handleCreateOrder" class="pay-btn" color="#1baeae" type="primary">生成订单</van-button>
     </div>
 
+    <!-- 底部弹出 -->
     <van-popup
       closeable
       :close-on-click-overlay="false"
@@ -100,6 +101,7 @@ export default {
       Toast.clear()
     }
 
+    // 页面跳转 带商品id参数 
     const goTo = () => {
       router.push({ path: '/address', query: { cartItemId: JSON.stringify(state.cartItemId), from: 'create-order' }})
     }

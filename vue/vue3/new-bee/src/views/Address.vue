@@ -72,6 +72,7 @@ export default {
     // 选中地址
     const select = (item) => {
       console.log(item);
+      // 页面跳转 带上选中的地址参数 从哪跳转的参数
       router.push({ path: '/create-order', query: { addressId: item.id, from: state.from }})
     }
 

@@ -31,10 +31,10 @@ export default {
     const router = useRouter()
     const route = useRoute()
     const state = reactive({
-      areaList: {
-        province_list: {},
-        city_list: {},
-        county_list: {}
+      areaList: { // 地区列表
+        province_list: {}, // 省
+        city_list: {}, // 市
+        county_list: {} // 区
       },
       type: 'add',
       from: route.query.from,
@@ -57,6 +57,7 @@ export default {
         })
 
       });
+      // console.log(province_list, city_list, county_list)
       state.areaList.province_list = _province_list
       state.areaList.city_list = _city_list
       state.areaList.county_list = _county_list
