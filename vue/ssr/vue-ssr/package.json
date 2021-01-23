@@ -1,0 +1,25 @@
+{
+  "name": "vue-ssr",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "config": {
+    "nuxt": {
+      "host": "127.0.0.1",
+      "post": "3000"
+    }
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "core-js": "^3.8.2",
+    "element-ui": "^2.15.0",
+    "nuxt": "^2.14.12",
+    "url-loader": "^4.1.1"
+  },
+  "devDependencies": {}
+}
