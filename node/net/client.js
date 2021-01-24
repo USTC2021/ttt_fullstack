@@ -7,8 +7,10 @@ socket.connect({
   port: 4000
 })
 
+// 单工通信
 // socket.write('hello world')
 
+// 半双工通信
 const lessonIds = [
   "136797",
   "136798",
@@ -31,8 +33,32 @@ const lessonIds = [
   "146582"
 ]
 
-const buffer = Buffer.alloc(4)
-buffer.writeInt32BE(
-  lessonIds[Math.floor(Math.random() * lessonIds.length)]
-)
-socket.write(buffer)
+// let buffer = Buffer.alloc(4)
+let index = Math.floor(Math.random() * lessonIds.length)
+// buffer.writeInt32BE(
+//   lessonIds[index]
+// )
+// socket.write(buffer)
+socket.write(encode(index))
+
+// 接收到服务端往socket管道里面添加的内容
+socket.on('data', (buffer) => {
+  console.log(buffer.toString());
+
+  // buffer = Buffer.alloc(4)
+  index = Math.floor(Math.random() * lessonIds.length)
+  // buffer.writeInt32BE(
+  //   lessonIds[index]
+  // )
+  // socket.write(buffer)
+  socket.write(encode(index))
+})
+
+function encode(index) {
+  let buffer = Buffer.alloc(4)
+  // index = Math.floor(Math.random() * lessonIds.length)
+  buffer.writeInt32BE(
+    lessonIds[index]
+  )
+  return buffer
+}

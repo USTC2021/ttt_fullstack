@@ -2,7 +2,7 @@ const net  = require("net");
 
 const server = net.createServer((socket) => {
   socket.on('data', function(buffer) {
-    // console.log(buffer, buffer.toString())
+    console.log(buffer, buffer.toString())
     const lessonId = buffer.readInt32BE()
     setTimeout(() => {
       socket.write(
