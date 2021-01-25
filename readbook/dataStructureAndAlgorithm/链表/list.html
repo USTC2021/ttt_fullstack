@@ -1,0 +1,189 @@
+<script>
+
+  class Node {
+    constructor(element) {
+      this.element = element
+      this.next = null
+    }
+  }
+
+  class LinkList {
+    constructor() {
+      this.head = new Node('head')
+    }
+
+    findByValue(item) {
+      let currentNode = this.head
+      while (currentNode !== null && currentNode.element !== item) {
+        currentNode = currentNode.next
+      }
+      return currentNode === null ? -1 : currentNode
+    }
+
+    // 在指定元素后面插入元素
+    insert(newElement, element) {
+      // 找到需要被插入的指定元素
+      let currentNode = this.findByValue(element)
+      if (currentNode === -1) {
+        console.log('未找到指定元素')
+        return
+      }
+      // 创建新结点
+      const newNode = new Node(newElement)
+      newNode.next = currentNode.next
+      currentNode.next = newNode
+    }
+
+    // 尾插法 链表的反转
+    reverseList () {
+      // 创建一个新的头结点
+      const root = new Node('head')
+      let currentNode = this.head.next 
+      while (currentNode !== null) {
+        // 保存当前结点的下一个结点值
+        const next = currentNode.next 
+        currentNode.next = root.next 
+        root.next = currentNode
+        currentNode = next
+      }
+      this.head = root
+    }
+
+    checkCircle () {
+      let fast = this.head.next
+      let slow = this.head
+      while (fast !== null && fast.next !== null) {
+        fast = fast.next.next 
+        slow = slow.next
+        if (slow === fast) return true
+      }
+      return false
+    }  
+    
+    display() {
+      // 先检查是否为环
+      if (this.checkCircle()) return false
+
+      let currentNode = this.head.next // 去除头结点
+      while(currentNode !== null) {
+        console.log(currentNode.element)
+        currentNode = currentNode.next
+      }
+    }
+
+    findPrev(item) {
+      let currentNode = this.head
+      while (currentNode.next !== null && currentNode.next.element !== item) {
+        currentNode = currentNode.next
+      }
+      return currentNode === null ? -1 : currentNode
+    }
+
+    // 根据值删除结点
+    remove(item) {
+      // 查找是否存在该值
+      const findNode = this.findByValue(item)
+      if (findNode === -1) {
+        console.log('不存在该值')
+        return
+      }
+      // 若存在该值，找到该值的前一个结点
+      const prevNode = this.findPrev(item)
+      prevNode.next = findNode.next
+    }
+
+    removeByIndexFromEnd(index) {
+      // 判断是否是环链表
+      if (this.checkCircle()) return false
+      let pos = 1
+      let currentNode = this.head.next
+      while (currentNode !== null && pos < index) {
+        currentNode = currentNode.next
+        pos++
+      }
+      if (currentNode === null) {
+        console.log('该结点不存在或无法删除最后一个结点')
+        return
+      }
+      this.remove(currentNode.element)
+      this.reverseList()
+    }
+
+  }
+
+  // 两有序链表合并
+  const mergeSortedList = (list1, list2) => {
+    if (!list1) {
+      return list2
+    }
+    if (!list2) {
+      return list1
+    }
+    let a = list1, b = list2, resultList
+    if (a.element < b.element) {
+      resultList = a
+      a = a.next
+    } else {
+      resultList = b
+      b = b.next
+    }
+    let currentNode = resultList
+    while (a !== null && b !== null) {
+      if (a.element < b.element) {
+        currentNode.next = a
+        a = a.next
+      } else {
+        currentNode.next = b
+        b = b.next
+      }
+      currentNode = currentNode.next
+    }
+    if (a !== null) {
+      currentNode.next = a
+    } else {
+      currentNode.next = b
+    }
+    return resultList
+  }
+
+  const linkList = new LinkList()
+  linkList.insert('apple', 'head')
+  linkList.insert('banana', 'apple')
+  linkList.insert('pear', 'banana')
+  linkList.insert('egg', 'pear')
+  console.log(linkList)
+
+  // 单链表反转
+  linkList.reverseList()
+  console.log(linkList)
+
+  // 链表中环的检测
+  linkList.checkCircle()
+  console.log(linkList)
+
+  // 显示所有结点
+  linkList.display()
+
+  // 删除链表倒数第n个结点
+  linkList.removeByIndexFromEnd(2)
+  linkList.display()
+
+  // 两个有序链表合并
+  const sortedList1 = new LinkList()
+  sortedList1.insert(9, 'head')
+  sortedList1.insert(6, 'head')
+  sortedList1.insert(4, 'head')
+  sortedList1.insert(1, 'head')
+  const sortedList2 = new LinkList()
+  sortedList2.insert(27, 'head')
+  sortedList2.insert(19, 'head')
+  sortedList2.insert(14, 'head')
+  sortedList2.insert(11, 'head')
+  sortedList2.insert(8, 'head')
+  sortedList2.insert(3, 'head')
+  let sortedList = mergeSortedList(sortedList1.head.next, sortedList2.head.next)
+  while(sortedList !== null) {
+    console.log(sortedList.element)
+    sortedList = sortedList.next
+  }
+</script>
