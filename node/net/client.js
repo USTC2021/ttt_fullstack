@@ -54,6 +54,7 @@ socket.on('data', (buffer) => {
   socket.write(encode(index))
 })
 
+// 编码Buffer数据流
 function encode(index) {
   let buffer = Buffer.alloc(4)
   // index = Math.floor(Math.random() * lessonIds.length)
